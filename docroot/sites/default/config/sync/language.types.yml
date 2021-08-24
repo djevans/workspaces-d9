@@ -1,7 +1,7 @@
 all:
+  - language_interface
   - language_content
   - language_url
-  - language_interface
 configurable:
   - language_interface
 negotiation:
@@ -14,8 +14,8 @@ negotiation:
       language-url-fallback: 1
   language_interface:
     enabled:
-      language-user: -9
       language-url: -10
+      language-user: -9
       language-selected: -6
     method_weights:
       language-user: -9

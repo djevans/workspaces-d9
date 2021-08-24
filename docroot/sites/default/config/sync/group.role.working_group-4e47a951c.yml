@@ -1,0 +1,17 @@
+uuid: 55a46f04-9ee3-4009-82f4-756845412018
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.working_group
+  enforced:
+    config:
+      - user.role.sessional_committee_members
+id: working_group-4e47a951c
+label: 'Sessional Committee Members'
+weight: 16
+internal: true
+audience: outsider
+group_type: working_group
+permissions_ui: false
+permissions: {  }

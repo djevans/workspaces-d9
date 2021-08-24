@@ -1,6 +1,6 @@
-uuid: 366fb8a9-1a1a-4058-bfb2-73e181f70e32
+uuid: 03c64b5c-3307-4517-adc0-dcfecfb90c19
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - node
@@ -12,8 +12,4 @@ path: node
 weight: -10
 plugin: node_search
 configuration:
-  rankings:
-    comments: 0
-    promote: 0
-    relevance: 0
-    sticky: 0
+  rankings: {  }

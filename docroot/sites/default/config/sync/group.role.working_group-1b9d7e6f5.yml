@@ -1,0 +1,17 @@
+uuid: 69423f17-dc05-4e9d-ab05-3831b7143275
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.working_group
+  enforced:
+    config:
+      - user.role.scc_members
+id: working_group-1b9d7e6f5
+label: ScC_members
+weight: 7
+internal: true
+audience: outsider
+group_type: working_group
+permissions_ui: false
+permissions: {  }

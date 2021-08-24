@@ -1,0 +1,17 @@
+uuid: e64ec638-855b-46ec-9a13-38ea76d2ae69
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.working_group
+  enforced:
+    config:
+      - user.role.wg_admin_convener
+id: working_group-28c1ea2ed
+label: 'WG admin/Convener'
+weight: 3
+internal: true
+audience: outsider
+group_type: working_group
+permissions_ui: false
+permissions: {  }

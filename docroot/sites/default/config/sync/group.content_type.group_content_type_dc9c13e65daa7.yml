@@ -1,0 +1,19 @@
+uuid: f0f57bb7-819f-4e28-aafe-3ccb4f719ca0
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.working_group
+    - node.type.discussion_wiki
+  module:
+    - gnode
+    - node
+id: group_content_type_dc9c13e65daa7
+label: 'Working Group: Group node (Discussion Wiki)'
+description: 'Adds <em class="placeholder">Discussion Wiki</em> content to groups both publicly and privately.'
+group_type: working_group
+content_plugin: 'group_node:discussion_wiki'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

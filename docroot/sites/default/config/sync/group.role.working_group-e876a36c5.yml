@@ -1,0 +1,17 @@
+uuid: e69b98b6-3df0-49e4-82a8-2068e94500a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.working_group
+  enforced:
+    config:
+      - user.role.workspace_moderator
+id: working_group-e876a36c5
+label: 'Workspace Moderator'
+weight: 12
+internal: true
+audience: outsider
+group_type: working_group
+permissions_ui: false
+permissions: {  }

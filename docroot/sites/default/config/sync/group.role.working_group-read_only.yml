@@ -1,0 +1,14 @@
+uuid: 05828195-9e02-460c-bc37-f191af06281a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.working_group
+id: working_group-read_only
+label: 'Read only'
+weight: 18
+internal: false
+audience: member
+group_type: working_group
+permissions_ui: true
+permissions: {  }

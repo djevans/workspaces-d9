@@ -1,0 +1,17 @@
+uuid: a74829f4-cb02-4084-87c3-3aaf6885c47c
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.working_group
+  enforced:
+    config:
+      - user.role.super_admin
+id: working_group-8244fcc6e
+label: 'Super admin'
+weight: 11
+internal: true
+audience: outsider
+group_type: working_group
+permissions_ui: false
+permissions: {  }

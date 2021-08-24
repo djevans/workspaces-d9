@@ -1,0 +1,11 @@
+uuid: cdf9262a-d04d-4d09-900a-1bfe6d2a7785
+langcode: en
+status: true
+dependencies: {  }
+id: working_group
+label: 'Working Group'
+description: 'This is a Working Group within a Work Plan.'
+new_revision: true
+creator_membership: true
+creator_wizard: false
+creator_roles: {  }
