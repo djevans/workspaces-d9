@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Contains diaspora_migrate.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function diaspora_migrate_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the diaspora_migrate module.
+    case 'help.page.diaspora_migrate':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_migration_plugins_alter().
+ */
+function diaspora_migrate_migration_plugins_alter(array &$migrations) {
+  // Don't migrate group nodes, as our own migration handles them.
+  $migrations = array_filter($migrations, function (array $migration) {
+    $excluded_node_types = ['working_group'];
+    return (
+      empty($migration['deriver'])
+      ||
+      $migration['deriver'] != 'Drupal\node\Plugin\migrate\D7NodeDeriver'
+      ||
+      !in_array($migration['source']['node_type'], $excluded_node_types)
+    );
+  });
+  // For fields on group node types, migrate them to fields on Group entities.
+
+}

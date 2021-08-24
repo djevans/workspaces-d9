@@ -1,0 +1,30 @@
+id: migration_group_memberships
+label: 'Migrate Group Memberships'
+migration_tags:
+  - 'Drupal 7'
+  - 'Organic Groups'
+migration_group: insert_group
+source:
+  plugin: migration_group_d7_og_membership_users
+  og_group_type: node
+  entity_type: user
+  group_type: working_group
+process:
+  type: group_content_type_id
+  gid: gid
+  entity_id: etid
+  created: created
+  group_roles:
+    plugin: sub_process
+    source: roles
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: migration_group_roles
+        source: rid
+destination:
+  plugin: entity:group_content
+migration_dependencies:
+  required:
+    - migration_group_roles
+    - migration_group_working_groups

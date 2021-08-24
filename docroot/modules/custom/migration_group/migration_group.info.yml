@@ -1,0 +1,10 @@
+name: 'Migration - Group'
+type: module
+description: 'Migrates Drupal 7 Organic Groups to Drupal 8 or 9 Group'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Custom'
+dependencies:
+  - drupal:migrate
+  - drupal:group
+  - drupal:gnode
