@@ -1,0 +1,20 @@
+uuid: 57d9889a-49fb-4550-b5ed-f8edf622fb05
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - bartik_cms
+id: bartik_cms_cms_user_login
+theme: bartik_cms
+region: content
+weight: -7
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: '0'
+visibility: {  }

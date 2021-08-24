@@ -1,0 +1,53 @@
+uuid: 679d3cc9-e3c5-46e5-be80-1be127e29a37
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-public-area
+  module:
+    - system
+name: public_area
+label: 'Public Area'
+group: 'Public Area'
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: "<front>\r\ncontact\r\nlinks-resources\r\nnode/250\r\nnode/256\r\nnode/257\r\nnode/318"
+    negate: false
+    uuid: 7ef43f07-707f-4074-9118-200643650299
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    negate: true
+    pages: 'search*'
+    uuid: aad6b90a-c6f7-4908-90d9-49cdff2727ba
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      9c286b41-768f-4edf-bfb8-87bfb6ed991e:
+        id: 'system_menu_block:menu-public-area'
+        label: 'Public Area'
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        expand_all_items: 0
+        region: sidebar_first
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_menu_block_menu_public_area
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: public_area
+        third_party_settings: {  }
+        uuid: 9c286b41-768f-4edf-bfb8-87bfb6ed991e
+    id: blocks
+    saved: false
+    uuid: e936a289-ec89-4584-b4ed-523f265c4a31
+    include_default_blocks: 0
+weight: 0

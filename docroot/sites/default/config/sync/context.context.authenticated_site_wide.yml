@@ -1,0 +1,163 @@
+uuid: eec6c03b-ba36-417a-b58d-3699865c65df
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.comments_recent
+    - views.view.links_and_resources
+    - views.view.new_content
+    - views.view.surveys
+    - views.view.who_s_online
+  module:
+    - forum
+    - search
+    - user
+    - views
+name: authenticated_site_wide
+label: 'Authenticated site-wide'
+group: Site-wide
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    uuid: 7ef3c54d-a4ec-4481-8a16-505a0ce81870
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path_exclusion:
+    id: request_path_exclusion
+    negate: true
+    pages: "search*\r\nuser\r\nadmin*\r\n*webform"
+    uuid: 0281579e-9663-4fa3-bdd2-1e49fda82d02
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      cdd6b8ae-8bf4-4954-9282-1a5985f68330:
+        id: 'views_block:comments_recent-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: '5'
+        region: sidebar_first
+        weight: '-1'
+        context_mapping: {  }
+        custom_id: views_block_comments_recent_block_1
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: authenticated_site_wide
+        third_party_settings: {  }
+        uuid: cdd6b8ae-8bf4-4954-9282-1a5985f68330
+      f872055b-6b30-45f4-8b18-a9ca71cdf977:
+        id: 'views_block:who_s_online-who_s_online_block'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: '5'
+        region: sidebar_first
+        weight: '0'
+        context_mapping: {  }
+        custom_id: views_block_who_s_online_who_s_online_block
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: authenticated_site_wide
+        third_party_settings: {  }
+        uuid: f872055b-6b30-45f4-8b18-a9ca71cdf977
+      fa4af721-f126-44a5-90c8-02169c7e67de:
+        id: 'views_block:surveys-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: sidebar_first
+        weight: '1'
+        context_mapping: {  }
+        custom_id: views_block_surveys_block_1
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: authenticated_site_wide
+        third_party_settings: {  }
+        uuid: fa4af721-f126-44a5-90c8-02169c7e67de
+      38675ed6-5560-4101-86c4-bb44bd236401:
+        id: forum_new_block
+        label: 'New forum topics'
+        provider: forum
+        label_display: visible
+        properties:
+          administrative: true
+        block_count: '5'
+        region: sidebar_second
+        weight: '-2'
+        context_mapping: {  }
+        custom_id: forum_new_block
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: authenticated_site_wide
+        third_party_settings: {  }
+        uuid: 38675ed6-5560-4101-86c4-bb44bd236401
+      b43cac8e-6d0c-4f93-933e-b675808be0b4:
+        id: 'views_block:new_content-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: sidebar_second
+        weight: '-1'
+        context_mapping: {  }
+        custom_id: views_block_new_content_block_1
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: authenticated_site_wide
+        third_party_settings: {  }
+        uuid: b43cac8e-6d0c-4f93-933e-b675808be0b4
+      938c7c5a-7bef-4b43-b16b-c84a11774ec1:
+        id: 'views_block:links_and_resources-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: sidebar_second
+        weight: '0'
+        context_mapping: {  }
+        custom_id: views_block_links_and_resources_block_1
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: authenticated_site_wide
+        third_party_settings: {  }
+        uuid: 938c7c5a-7bef-4b43-b16b-c84a11774ec1
+      11ead93b-d940-4143-892e-933a716c0014:
+        id: search_form_block
+        label: Search
+        provider: search
+        label_display: visible
+        page_id: ''
+        region: sidebar_second
+        weight: '-3'
+        context_mapping: {  }
+        custom_id: search_form_block
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: authenticated_site_wide
+        third_party_settings: {  }
+        uuid: 11ead93b-d940-4143-892e-933a716c0014
+    id: blocks
+    saved: false
+    uuid: 76da1153-9227-4da3-814e-952840a0e876
+    include_default_blocks: 0
+weight: 0

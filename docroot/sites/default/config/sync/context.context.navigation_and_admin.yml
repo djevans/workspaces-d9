@@ -1,0 +1,52 @@
+uuid: 2561384e-7e5f-4828-8ec0-9cf3c7536c32
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+    - user
+name: navigation_and_admin
+label: 'Navigation and Admin'
+group: Admin
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+      super_admin: super_admin
+      workspace_moderator: workspace_moderator
+    negate: false
+    uuid: 28de665c-58c6-4734-8dd3-c65ff41c80e5
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+reactions:
+  blocks:
+    blocks:
+      4c29f79c-7e7f-45fd-b463-02ddc550a262:
+        id: 'system_menu_block:main'
+        label: Navigation
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        expand_all_items: 0
+        region: sidebar_first
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_menu_block_main
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: navigation_and_admin
+        third_party_settings: {  }
+        uuid: 4c29f79c-7e7f-45fd-b463-02ddc550a262
+    id: blocks
+    saved: false
+    uuid: 62f9c30b-204b-441e-b4b0-d7978a1c0efe
+    include_default_blocks: 0
+weight: 0

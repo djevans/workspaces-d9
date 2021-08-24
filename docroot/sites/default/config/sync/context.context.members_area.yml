@@ -1,0 +1,47 @@
+uuid: d6346d37-71ae-4b45-9f4d-8efc08982cf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-tc-member-s-area
+  module:
+    - system
+name: members_area
+label: 'Members Area'
+group: 'Members Area'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: "scc-members\r\nuser\r\nsecretariat"
+    negate: false
+    uuid: d279aecf-ce6b-45d8-889e-9897d8fbb48d
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      1cc7511f-1e0e-4b29-b357-f3b2fdfedd42:
+        id: 'system_menu_block:menu-tc-member-s-area'
+        label: 'Members '
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        expand_all_items: 0
+        region: sidebar_first
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_menu_block_menu_tc_member_s_area
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: members_area
+        third_party_settings: {  }
+        uuid: 1cc7511f-1e0e-4b29-b357-f3b2fdfedd42
+    id: blocks
+    saved: false
+    uuid: c8d709e8-ed72-4877-aeac-edaf91e4c5c3
+    include_default_blocks: 0
+weight: 0

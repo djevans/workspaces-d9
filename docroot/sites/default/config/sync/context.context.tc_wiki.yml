@@ -1,0 +1,56 @@
+uuid: 623662eb-e3f4-4b66-b68f-c6f79dd51a7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-tc-wiki
+  module:
+    - node
+    - system
+name: tc_wiki
+label: 'TC Wiki'
+group: Wiki
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  node_type:
+    id: node_type
+    bundles:
+      discussion_wiki: discussion_wiki
+    negate: false
+    uuid: 024175e2-ab0b-4252-9b78-807b78bd4a68
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: wiki
+    negate: false
+    uuid: 5cea5102-61bb-4a52-8ea0-f9c021cfebad
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      625e408a-95cf-4ee3-b830-a0792f105f22:
+        id: 'system_menu_block:menu-tc-wiki'
+        label: Wiki
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        expand_all_items: 0
+        region: sidebar_first
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_menu_block_menu_tc_wiki
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: tc_wiki
+        third_party_settings: {  }
+        uuid: 625e408a-95cf-4ee3-b830-a0792f105f22
+    id: blocks
+    saved: false
+    uuid: 75ff806c-27e4-4244-b095-4256e36e1d8e
+    include_default_blocks: 0
+weight: 0

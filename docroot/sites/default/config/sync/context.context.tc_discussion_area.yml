@@ -1,0 +1,57 @@
+uuid: d68ca6ce-3e68-4fa0-a43b-05c8fcab3efc
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-tc-discussion-area
+  module:
+    - system
+    - term_condition
+name: tc_discussion_area
+label: 'TC Discussion Area'
+group: 'Discussion Area'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  term:
+    id: term
+    tid:
+      -
+        target_id: '58'
+    negate: 0
+    uuid: 2d7595a0-e50f-4b88-abce-18b62059b77a
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "forum\r\nforum/*"
+    negate: false
+    uuid: 6e2950d6-8da7-4dd6-8e8f-d4453f8026b3
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      abb7cc9a-1d74-4ead-89d0-5e727d7317f7:
+        id: 'system_menu_block:menu-tc-discussion-area'
+        label: 'Discussion '
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        expand_all_items: 0
+        region: sidebar_first
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_menu_block_menu_tc_discussion_area
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: tc_discussion_area
+        third_party_settings: {  }
+        uuid: abb7cc9a-1d74-4ead-89d0-5e727d7317f7
+    id: blocks
+    saved: false
+    uuid: c934e56a-3bc7-4592-9c1a-91a54b594818
+    include_default_blocks: 0
+weight: 0

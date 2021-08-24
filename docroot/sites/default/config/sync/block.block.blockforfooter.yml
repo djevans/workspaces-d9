@@ -1,0 +1,45 @@
+uuid: ab412a21-2207-49b6-9dfd-20ae339dd74c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:df1e2223-10d2-478e-b947-c4dc70d2fe39'
+  module:
+    - block_content
+    - context
+  theme:
+    - bartik_cms
+id: blockforfooter
+theme: bartik_cms
+region: footer_fifth
+weight: 0
+provider: null
+plugin: 'block_content:df1e2223-10d2-478e-b947-c4dc70d2fe39'
+settings:
+  id: 'block_content:df1e2223-10d2-478e-b947-c4dc70d2fe39'
+  label: 'Block for footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_status:
+    id: user_status
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  context_all:
+    id: context_all
+    values: ''
+    negate: null
+  context:
+    id: context
+    values: ''
+    negate: null

@@ -1,0 +1,40 @@
+uuid: 48c54a46-91e6-4dff-9b57-c7553fdc6ad2
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+    - language
+  theme:
+    - bartik_cms
+id: languageswitcher
+theme: bartik_cms
+region: header
+weight: -6
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility:
+  user_status:
+    id: user_status
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  context_all:
+    id: context_all
+    values: ''
+    negate: null
+  context:
+    id: context
+    values: ''
+    negate: null

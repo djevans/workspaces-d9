@@ -1,0 +1,24 @@
+uuid: 8d0ad8ba-3171-4439-9fbc-ca0be8fa2d71
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+  theme:
+    - bartik_cms
+_core:
+  default_config_hash: MjMChFykEa-4UxdnGstVk1FcXqwUF3p_GBJLIFT3_XI
+id: bartik_cms_group_operations
+theme: bartik_cms
+region: sidebar_first
+weight: -20
+provider: null
+plugin: group_operations
+settings:
+  id: group_operations
+  label: 'Group operations'
+  provider: group
+  label_display: visible
+  context_mapping:
+    group: '@group.group_route_context:group'
+visibility: {  }

@@ -1,0 +1,57 @@
+uuid: 697939c2-cf3e-4c6d-a184-292d794e7bf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-tc-working-area
+  module:
+    - system
+    - term_condition
+name: tc_working_area
+label: 'TC Working Area'
+group: 'Working Area'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  term:
+    id: term
+    tid:
+      -
+        target_id: '47'
+    negate: 0
+    uuid: 7d8f70d8-33cb-4b13-a742-aef9a1238751
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: node/3
+    negate: false
+    uuid: 6eb0ebb6-6216-4ff0-b239-8956482113a9
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      dd4ac784-7ff6-4cb5-b22c-0fc61e6c68ea:
+        id: 'system_menu_block:menu-tc-working-area'
+        label: 'Working Groups'
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        expand_all_items: 0
+        region: sidebar_first
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_menu_block_menu_tc_working_area
+        theme: bartik_cms
+        css_class: ''
+        unique: 0
+        context_id: tc_working_area
+        third_party_settings: {  }
+        uuid: dd4ac784-7ff6-4cb5-b22c-0fc61e6c68ea
+    id: blocks
+    saved: false
+    uuid: ca78e7e7-18f4-463a-b092-c5110405c33f
+    include_default_blocks: 0
+weight: 0
