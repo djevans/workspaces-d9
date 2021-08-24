@@ -1,0 +1,25 @@
+uuid: f694af9d-8634-4d8b-ba55-48279a9216db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.forum
+  module:
+    - text
+_core:
+  default_config_hash: Nq-dilQkMUpR8QaSNEiuacUpzk6fN9nWLfupQoNxnNE
+id: node.forum.body
+field_name: body
+entity_type: node
+bundle: forum
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,10 @@
+uuid: 309a8b8a-db1a-482a-aa41-1193489d605d
+langcode: en
+status: true
+dependencies:
+  module:
+    - group_permissions
+id: group_permission.token
+label: Token
+targetEntityType: group_permission
+cache: true

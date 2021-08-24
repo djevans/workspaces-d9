@@ -1,0 +1,10 @@
+uuid: 2ed1873d-eea8-43c2-8352-6475486ad3bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - job_scheduler
+id: job_schedule.token
+label: Token
+targetEntityType: job_schedule
+cache: true
