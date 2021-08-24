@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.og_group_ref
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -28,3 +29,8 @@ content:
 hidden:
   langcode: true
   member_for: true
+  official_contact_information_profiles: true
+  og_group_ref: true
+  personal_information_profiles: true
+  scc_expertise_profiles: true
+  scc_function_profiles: true

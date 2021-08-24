@@ -1,0 +1,23 @@
+uuid: bf16a4fe-a4ed-460a-b2ff-770c6e4fa58b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.group_content_access
+    - node.type.working_group_topic
+  module:
+    - options
+id: node.working_group_topic.group_content_access
+field_name: group_content_access
+entity_type: node
+bundle: working_group_topic
+label: 'Group content visibility'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

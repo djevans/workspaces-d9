@@ -1,0 +1,23 @@
+uuid: da6ca8fb-fd85-4f52-9cbe-e324860cd528
+langcode: en
+status: true
+dependencies:
+  module:
+    - forum
+  theme:
+    - seven
+id: seven_forum_active
+theme: seven
+region: content
+weight: 0
+provider: null
+plugin: forum_active_block
+settings:
+  id: forum_active_block
+  label: ''
+  provider: forum
+  label_display: '0'
+  properties:
+    administrative: '1'
+  block_count: 5
+visibility: {  }

@@ -1,0 +1,19 @@
+uuid: 7ed49abc-8305-46bd-870f-092acf898493
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_telephone
+    - profile.type.official_contact_information
+id: profile.official_contact_information.field_telephone
+field_name: field_telephone
+entity_type: profile
+bundle: official_contact_information
+label: Telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,14 @@
+uuid: e495fb64-8161-4999-9c2b-bd6231c4145e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.councillor
+  module:
+    - user
+id: user_add_role_action.councillor
+label: 'Add the Councillor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: councillor

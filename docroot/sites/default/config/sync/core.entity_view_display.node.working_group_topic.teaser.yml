@@ -1,0 +1,41 @@
+uuid: 88e0126e-bd71-4989-9a1d-47fcb1fce88d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.working_group_topic.body
+    - field.field.node.working_group_topic.comment_node_working_group_top
+    - field.field.node.working_group_topic.field_attachment
+    - field.field.node.working_group_topic.field_wg_taxonomy
+    - field.field.node.working_group_topic.group_content_access
+    - field.field.node.working_group_topic.og_group_ref
+    - node.type.working_group_topic
+  module:
+    - text
+    - user
+id: node.working_group_topic.teaser
+targetEntityType: node
+bundle: working_group_topic
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 1
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_working_group_top: true
+  field_attachment: true
+  field_wg_taxonomy: true
+  group_content_access: true
+  langcode: true
+  og_group_ref: true

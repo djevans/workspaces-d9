@@ -1,0 +1,21 @@
+uuid: 7c0f7535-42aa-4143-a2ed-f3dece9fb3c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_discussion_wiki
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_discussion_wiki.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_discussion_wiki
+label: Comment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

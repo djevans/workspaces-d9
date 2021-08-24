@@ -1,0 +1,28 @@
+uuid: 9634c4d7-4887-40da-a210-279f095f04a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_discussion_wiki
+    - field.field.comment.comment_node_discussion_wiki.comment_body
+  module:
+    - text
+id: comment.comment_node_discussion_wiki.default
+targetEntityType: comment
+bundle: comment_node_discussion_wiki
+mode: default
+content:
+  comment_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

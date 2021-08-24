@@ -1,0 +1,62 @@
+uuid: a3d230b6-7266-4cf7-bbb2-953fda0624e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.scc_expertise.field_expertise_on_threats
+    - field.field.profile.scc_expertise.field_expertise_taxonomic_groups
+    - field.field.profile.scc_expertise.field_geographic_region_expertis
+    - field.field.profile.scc_expertise.field_habitat_expertise
+    - field.field.profile.scc_expertise.field_scientific_expertise
+    - field.field.profile.scc_expertise.field_working_languages
+    - profile.type.scc_expertise
+  module:
+    - options
+id: profile.scc_expertise.default
+targetEntityType: profile
+bundle: scc_expertise
+mode: default
+content:
+  field_expertise_on_threats:
+    label: above
+    weight: 3
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_expertise_taxonomic_groups:
+    label: above
+    weight: 1
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_geographic_region_expertis:
+    label: above
+    weight: 5
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_habitat_expertise:
+    label: above
+    weight: 4
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_scientific_expertise:
+    label: above
+    weight: 2
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_working_languages:
+    label: above
+    weight: 0
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

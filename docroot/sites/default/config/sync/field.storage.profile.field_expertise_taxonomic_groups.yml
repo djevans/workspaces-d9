@@ -1,0 +1,42 @@
+uuid: a04f749e-b779-4585-a9b9-48ce13e081fa
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_expertise_taxonomic_groups
+field_name: field_expertise_taxonomic_groups
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Aquatic mammals'
+      label: 'Aquatic mammals'
+    -
+      value: Bats
+      label: Bats
+    -
+      value: Birds
+      label: Birds
+    -
+      value: Fish
+      label: Fish
+    -
+      value: Insects
+      label: Insects
+    -
+      value: Marine_turtles
+      label: 'Marine turtles'
+    -
+      value: Terrestrial_mammals
+      label: 'Terrestrial mammals'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

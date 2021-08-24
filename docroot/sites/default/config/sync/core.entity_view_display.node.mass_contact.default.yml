@@ -1,0 +1,103 @@
+uuid: 52ff0a1c-395b-4673-bbf9-05c70d0fa476
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_mass_contact.default
+    - field.field.node.mass_contact.body
+    - field.field.node.mass_contact.comment_node_mass_contact
+    - field.field.node.mass_contact.field_mass_contact_attachments
+    - field.field.node.mass_contact.field_mass_contact_bcc
+    - field.field.node.mass_contact.field_mass_contact_category
+    - field.field.node.mass_contact.field_mass_contact_from
+    - field.field.node.mass_contact.field_mass_contact_headers
+    - field.field.node.mass_contact.field_mass_contact_result
+    - field.field.node.mass_contact.field_mass_contact_to
+    - node.type.mass_contact
+  module:
+    - comment
+    - text
+    - user
+id: node.mass_contact.default
+targetEntityType: node
+bundle: mass_contact
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_mass_contact:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_mass_contact_attachments:
+    label: above
+    weight: 10
+    type: entity_reference_entity_view
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_mass_contact_bcc:
+    label: above
+    weight: -7
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_mass_contact_category:
+    label: above
+    weight: -9
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_mass_contact_from:
+    label: above
+    weight: -10
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_mass_contact_headers:
+    label: above
+    weight: -6
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_mass_contact_result:
+    label: above
+    weight: 5
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_mass_contact_to:
+    label: above
+    weight: -8
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

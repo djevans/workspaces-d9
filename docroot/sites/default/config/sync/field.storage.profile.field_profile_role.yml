@@ -1,0 +1,42 @@
+uuid: 4aae5fe2-8116-43b7-acc8-ea302f779cd6
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_profile_role
+field_name: field_profile_role
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Scientific Councillor (Party)'
+      label: 'Scientific Councillor (Party)'
+    -
+      value: 'COP-appointed Scientific Councillor'
+      label: 'COP-appointed Scientific Councillor'
+    -
+      value: 'NGO / IGO Observer'
+      label: 'NGO / IGO Observer'
+    -
+      value: Observer
+      label: 'Governmental Observer'
+    -
+      value: 'WG Member'
+      label: 'Working Group Member (external expert)'
+    -
+      value: 'CMS Secretariat'
+      label: 'CMS Secretariat'
+    -
+      value: 'None of the above (Guest)'
+      label: 'None of the above (Guest)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

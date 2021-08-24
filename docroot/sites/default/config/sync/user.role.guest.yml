@@ -1,0 +1,30 @@
+uuid: cc40eb21-61ea-4dde-bcbb-693a7919bb74
+langcode: en
+status: true
+dependencies: {  }
+id: guest
+label: Guest
+weight: 8
+is_admin: null
+permissions:
+  - 'access overlay'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'edit own official_contact_information profile'
+  - 'edit own personal_information profile'
+  - 'edit own scc_expertise profile'
+  - 'edit own tc_function profile'
+  - 'save draft'
+  - 'search content'
+  - 'subscribe to taxonomy terms'
+  - 'suspend own subscriptions'
+  - 'use advanced search'
+  - 'view any official_contact_information profile'
+  - 'view any personal_information profile'
+  - 'view any scc_expertise profile'
+  - 'view any tc_function profile'
+  - 'view own official_contact_information profile'
+  - 'view own personal_information profile'
+  - 'view own scc_expertise profile'
+  - 'view own tc_function profile'
+  - 'view status messages'

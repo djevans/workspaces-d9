@@ -1,0 +1,19 @@
+uuid: ce98ffbd-1c80-4a19-8484-0e130deeab63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_ngo_representative
+    - profile.type.scc_function
+id: profile.scc_function.field_ngo_representative
+field_name: field_ngo_representative
+entity_type: profile
+bundle: scc_function
+label: 'IGO / NGO Observer'
+description: 'You are an IGO or NGO Representative? Please specify your organization.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

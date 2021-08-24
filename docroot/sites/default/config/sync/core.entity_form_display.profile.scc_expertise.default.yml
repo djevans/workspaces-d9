@@ -1,0 +1,55 @@
+uuid: 8a621025-7461-4663-960b-1f13c06b972b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.scc_expertise.field_expertise_on_threats
+    - field.field.profile.scc_expertise.field_expertise_taxonomic_groups
+    - field.field.profile.scc_expertise.field_geographic_region_expertis
+    - field.field.profile.scc_expertise.field_habitat_expertise
+    - field.field.profile.scc_expertise.field_scientific_expertise
+    - field.field.profile.scc_expertise.field_working_languages
+    - profile.type.scc_expertise
+id: profile.scc_expertise.default
+targetEntityType: profile
+bundle: scc_expertise
+mode: default
+content:
+  field_expertise_on_threats:
+    weight: 4
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_expertise_taxonomic_groups:
+    weight: 2
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_geographic_region_expertis:
+    weight: 6
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_habitat_expertise:
+    weight: 5
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_scientific_expertise:
+    weight: 3
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_working_languages:
+    weight: 1
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  is_default: true

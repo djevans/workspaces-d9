@@ -1,0 +1,21 @@
+uuid: f30a1937-9139-4246-8154-fe9a8e868058
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_working_languages
+    - profile.type.scc_expertise
+  module:
+    - options
+id: profile.scc_expertise.field_working_languages
+field_name: field_working_languages
+entity_type: profile
+bundle: scc_expertise
+label: 'Working languages'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

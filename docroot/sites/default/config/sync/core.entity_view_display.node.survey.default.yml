@@ -1,0 +1,41 @@
+uuid: ac49a8ce-8cbf-427f-b2b4-bba69269f02c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_survey.default
+    - field.field.node.survey.body
+    - field.field.node.survey.comment_node_survey
+    - node.type.survey
+  module:
+    - comment
+    - text
+    - user
+id: node.survey.default
+targetEntityType: node
+bundle: survey
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_survey:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

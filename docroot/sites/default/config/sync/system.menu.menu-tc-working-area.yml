@@ -1,0 +1,8 @@
+uuid: 3a71800c-34e0-4c61-a8d8-e9992e8d401a
+langcode: und
+status: true
+dependencies: {  }
+id: menu-tc-working-area
+label: 'Working Groups'
+description: ''
+locked: false

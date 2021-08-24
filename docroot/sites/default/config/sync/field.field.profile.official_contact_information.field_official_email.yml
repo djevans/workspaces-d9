@@ -1,0 +1,19 @@
+uuid: 43093f94-9521-4668-97e3-18b682930b90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_official_email
+    - profile.type.official_contact_information
+id: profile.official_contact_information.field_official_email
+field_name: field_official_email
+entity_type: profile
+bundle: official_contact_information
+label: 'Official Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

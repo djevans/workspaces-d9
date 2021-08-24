@@ -1,0 +1,80 @@
+uuid: 56e9b345-ee63-4a2b-8eb7-fba6764fcee9
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_profile2_scc_expertise
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Profile2 ()'
+source:
+  plugin: d7_profile2
+  constants:
+    status: 1
+    is_default: 1
+  bundle: scc_expertise
+process:
+  profile_id:
+    -
+      plugin: get
+      source: pid
+  type:
+    -
+      plugin: get
+      source: type
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: constants/status
+  is_default:
+    -
+      plugin: get
+      source: constants/is_default
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  field_working_languages:
+    -
+      plugin: get
+      source: field_working_languages
+  field_expertise_taxonomic_groups:
+    -
+      plugin: get
+      source: field_expertise_taxonomic_groups
+  field_scientific_expertise:
+    -
+      plugin: get
+      source: field_scientific_expertise
+  field_expertise_on_threats:
+    -
+      plugin: get
+      source: field_expertise_on_threats
+  field_habitat_expertise:
+    -
+      plugin: get
+      source: field_habitat_expertise
+  field_geographic_region_expertis:
+    -
+      plugin: get
+      source: field_geographic_region_expertis
+destination:
+  plugin: 'entity:profile'
+  default_bundle: scc_expertise
+migration_dependencies:
+  required:
+    - upgrade_d7_profile2_type
+  optional:
+    - upgrade_d7_field_instance

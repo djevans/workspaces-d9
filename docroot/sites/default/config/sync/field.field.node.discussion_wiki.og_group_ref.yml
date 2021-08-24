@@ -1,0 +1,29 @@
+uuid: 77619883-25fd-4852-a50a-5b201c3fe9ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_group_ref
+    - node.type.discussion_wiki
+id: node.discussion_wiki.og_group_ref
+field_name: og_group_ref
+entity_type: node
+bundle: discussion_wiki
+label: 'Groups audience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      og_behavior:
+        status: true
+    target_bundles: null
+    membership_type: og_membership_type_default
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

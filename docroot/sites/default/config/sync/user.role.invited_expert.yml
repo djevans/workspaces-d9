@@ -1,0 +1,35 @@
+uuid: fcd6dd79-bd69-497d-872e-2025dd3af892
+langcode: en
+status: true
+dependencies: {  }
+id: invited_expert
+label: 'Invited Expert'
+weight: 14
+is_admin: null
+permissions:
+  - 'access overlay'
+  - 'access user profiles'
+  - 'edit any discussion_wiki content'
+  - 'edit own comments'
+  - 'edit own discussion_wiki content'
+  - 'edit own official_contact_information profile'
+  - 'edit own personal_information profile'
+  - 'edit own scc_expertise profile'
+  - 'edit own tc_function profile'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'subscribe to taxonomy terms'
+  - 'suspend own subscriptions'
+  - 'use advanced search'
+  - 'use text format full_html'
+  - 'view any official_contact_information profile'
+  - 'view any personal_information profile'
+  - 'view any scc_expertise profile'
+  - 'view any tc_function profile'
+  - 'view own official_contact_information profile'
+  - 'view own personal_information profile'
+  - 'view own scc_expertise profile'
+  - 'view own tc_function profile'
+  - 'view own unpublished content'
+  - 'view revisions'

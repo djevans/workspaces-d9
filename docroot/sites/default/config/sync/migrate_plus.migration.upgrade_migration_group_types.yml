@@ -1,0 +1,53 @@
+uuid: 0068ee6a-2b06-4d02-b322-e07e0a7ea016
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_migration_group_types
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - 'Organic Groups'
+migration_group: migrate_drupal_7
+label: 'Migrate Group Types'
+source:
+  plugin: migration_group_d7_og_node_types
+  constants:
+    boolean_true: 1
+    boolean_false: 0
+process:
+  id:
+    -
+      plugin: get
+      source: type
+  label:
+    -
+      plugin: get
+      source: name
+  description:
+    -
+      plugin: get
+      source: description
+  creator_membership:
+    -
+      plugin: get
+      source: constants/boolean_true
+  creator_wizard:
+    -
+      plugin: get
+      source: constants/boolean_false
+  add_admin_role:
+    -
+      plugin: get
+      source: constants/boolean_true
+  assign_admin_role:
+    -
+      plugin: get
+      source: constants/boolean_true
+  creator_roles: {  }
+destination:
+  plugin: 'entity:group_type'
+migration_dependencies:
+  required: {  }
+  optional: {  }

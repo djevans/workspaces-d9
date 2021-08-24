@@ -1,0 +1,9 @@
+uuid: 7419c249-33ef-4044-a120-d49ec62babec
+langcode: en
+status: true
+dependencies: {  }
+id: councillor
+label: Councillor
+weight: 15
+is_admin: null
+permissions: {  }

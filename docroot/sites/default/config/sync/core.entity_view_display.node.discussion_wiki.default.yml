@@ -1,0 +1,53 @@
+uuid: 23e5515e-d441-455b-bded-1a90ea8efc64
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_discussion_wiki.default
+    - field.field.node.discussion_wiki.body
+    - field.field.node.discussion_wiki.comment_node_discussion_wiki
+    - field.field.node.discussion_wiki.field_attachment
+    - field.field.node.discussion_wiki.og_group_ref
+    - node.type.discussion_wiki
+  module:
+    - comment
+    - text
+    - user
+id: node.discussion_wiki.default
+targetEntityType: node
+bundle: discussion_wiki
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_discussion_wiki:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_attachment:
+    label: hidden
+    weight: 2
+    type: entity_reference_entity_view
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  og_group_ref: true

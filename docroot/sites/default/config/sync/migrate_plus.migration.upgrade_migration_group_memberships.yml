@@ -1,0 +1,52 @@
+uuid: 79e5617c-f445-4e89-bd76-b72d72d7efe0
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_migration_group_memberships
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - 'Organic Groups'
+migration_group: migrate_drupal_7
+label: 'Migrate Group Memberships'
+source:
+  plugin: migration_group_d7_og_membership_users
+  og_group_type: node
+  entity_type: user
+  group_type: working_group
+process:
+  type:
+    -
+      plugin: get
+      source: group_content_type_id
+  gid:
+    -
+      plugin: get
+      source: gid
+  entity_id:
+    -
+      plugin: get
+      source: etid
+  created:
+    -
+      plugin: get
+      source: created
+  group_roles:
+    -
+      plugin: sub_process
+      source: roles
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: upgrade_migration_group_roles
+          source: rid
+destination:
+  plugin: 'entity:group_content'
+migration_dependencies:
+  required:
+    - upgrade_migration_group_roles
+    - upgrade_migration_group_working_groups
+  optional:
+    - upgrade_migration_group_roles

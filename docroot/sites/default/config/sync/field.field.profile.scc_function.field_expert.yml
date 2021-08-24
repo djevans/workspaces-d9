@@ -1,0 +1,21 @@
+uuid: 95f976d5-0336-432d-abd9-a6059e831b3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_expert
+    - profile.type.scc_function
+  module:
+    - options
+id: profile.scc_function.field_expert
+field_name: field_expert
+entity_type: profile
+bundle: scc_function
+label: 'COP-appointed Councillor for'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

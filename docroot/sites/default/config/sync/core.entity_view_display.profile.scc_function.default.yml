@@ -1,0 +1,82 @@
+uuid: ff2cfb3e-97c5-47f6-b06f-9e3564d28fa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.scc_function.field_expert
+    - field.field.profile.scc_function.field_guest
+    - field.field.profile.scc_function.field_ngo_representative
+    - field.field.profile.scc_function.field_observer
+    - field.field.profile.scc_function.field_profile_role
+    - field.field.profile.scc_function.field_regional_representative_tc
+    - field.field.profile.scc_function.field_tc_functions
+    - field.field.profile.scc_function.field_wg_member_extern
+    - profile.type.scc_function
+  module:
+    - options
+id: profile.scc_function.default
+targetEntityType: profile
+bundle: scc_function
+mode: default
+content:
+  field_expert:
+    label: above
+    weight: 2
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_guest:
+    label: above
+    weight: 6
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_ngo_representative:
+    label: above
+    weight: 3
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_observer:
+    label: above
+    weight: 4
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_profile_role:
+    label: above
+    weight: 0
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_regional_representative_tc:
+    label: above
+    weight: 1
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_tc_functions:
+    label: above
+    weight: 7
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_wg_member_extern:
+    label: above
+    weight: 8
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

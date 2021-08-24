@@ -1,0 +1,14 @@
+uuid: 19a6811e-348c-4303-8fc2-36c71bb35138
+langcode: en
+status: true
+dependencies: {  }
+name: 'Wiki format'
+format: line_breaks
+weight: -5
+filters:
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }

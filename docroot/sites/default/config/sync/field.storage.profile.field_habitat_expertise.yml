@@ -1,0 +1,45 @@
+uuid: 1e0a380d-6118-45ac-aac7-6489ce3b89d9
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_habitat_expertise
+field_name: field_habitat_expertise
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Artificial_habitats
+      label: 'Artificial habitats (e.g. arable land)'
+    -
+      value: Desert
+      label: Desert
+    -
+      value: Forest
+      label: Forest
+    -
+      value: Grassland
+      label: Grassland
+    -
+      value: Marine
+      label: Marine
+    -
+      value: Mountains
+      label: Mountains
+    -
+      value: Savanna
+      label: Savanna
+    -
+      value: Wetlands
+      label: Wetlands
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

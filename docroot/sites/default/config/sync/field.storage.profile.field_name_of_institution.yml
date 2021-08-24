@@ -1,0 +1,21 @@
+uuid: 6f30844d-00f7-442e-9488-ab10e1ba2de1
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_name_of_institution
+field_name: field_name_of_institution
+entity_type: profile
+type: string
+settings:
+  max_length: 1000
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

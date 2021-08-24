@@ -1,0 +1,72 @@
+uuid: 2f9c1a54-a95f-4ad4-b7ee-146abfd85277
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_profile2_official_contact_information
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Profile2 ()'
+source:
+  plugin: d7_profile2
+  constants:
+    status: 1
+    is_default: 1
+  bundle: official_contact_information
+process:
+  profile_id:
+    -
+      plugin: get
+      source: pid
+  type:
+    -
+      plugin: get
+      source: type
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: constants/status
+  is_default:
+    -
+      plugin: get
+      source: constants/is_default
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  field_name_of_institution:
+    -
+      plugin: get
+      source: field_name_of_institution
+  field_full_address_of_institutio:
+    -
+      plugin: get
+      source: field_full_address_of_institutio
+  field_telephone:
+    -
+      plugin: get
+      source: field_telephone
+  field_official_email:
+    -
+      plugin: get
+      source: field_official_email
+destination:
+  plugin: 'entity:profile'
+  default_bundle: official_contact_information
+migration_dependencies:
+  required:
+    - upgrade_d7_profile2_type
+  optional:
+    - upgrade_d7_field_instance

@@ -1,0 +1,19 @@
+uuid: 2ef9d853-a1b8-4933-8892-baf43a542f37
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_full_address_of_institutio
+field_name: field_full_address_of_institutio
+entity_type: profile
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

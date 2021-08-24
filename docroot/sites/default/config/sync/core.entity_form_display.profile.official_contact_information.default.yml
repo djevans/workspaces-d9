@@ -1,0 +1,49 @@
+uuid: 6c81c938-d7c3-4777-abd5-1ec7220fee54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.official_contact_information.field_full_address_of_institutio
+    - field.field.profile.official_contact_information.field_name_of_institution
+    - field.field.profile.official_contact_information.field_official_email
+    - field.field.profile.official_contact_information.field_telephone
+    - profile.type.official_contact_information
+id: profile.official_contact_information.default
+targetEntityType: profile
+bundle: official_contact_information
+mode: default
+content:
+  field_full_address_of_institutio:
+    weight: 2
+    type: string_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_name_of_institution:
+    weight: 1
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_official_email:
+    weight: 4
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_telephone:
+    weight: 3
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  is_default: true

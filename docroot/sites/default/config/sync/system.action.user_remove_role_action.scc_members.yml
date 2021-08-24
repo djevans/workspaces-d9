@@ -1,0 +1,14 @@
+uuid: 016d203c-e34d-4ddd-91d0-bba153987cf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.scc_members
+  module:
+    - user
+id: user_remove_role_action.scc_members
+label: 'Remove the ScC_members role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: scc_members

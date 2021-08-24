@@ -1,0 +1,19 @@
+uuid: efe13b08-2cb3-49ae-8cfd-b3305a6ae002
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_tc_functions
+    - profile.type.scc_function
+id: profile.scc_function.field_tc_functions
+field_name: field_tc_functions
+entity_type: profile
+bundle: scc_function
+label: 'Please briefly describe your main function(s) in the CMS ScC'
+description: 'The text below will appear under your public profile, so use it to highlight your/your organizations role in the ScC and include the list of countries in your region'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

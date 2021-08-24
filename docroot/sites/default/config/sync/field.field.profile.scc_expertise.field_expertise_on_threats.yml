@@ -1,0 +1,21 @@
+uuid: b5ad4fb6-4d01-42a8-868d-de11b7c2b04b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_expertise_on_threats
+    - profile.type.scc_expertise
+  module:
+    - options
+id: profile.scc_expertise.field_expertise_on_threats
+field_name: field_expertise_on_threats
+entity_type: profile
+bundle: scc_expertise
+label: 'Expertise on threats'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

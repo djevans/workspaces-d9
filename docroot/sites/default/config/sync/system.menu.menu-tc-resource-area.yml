@@ -1,0 +1,8 @@
+uuid: 3561f30c-d588-4ade-9699-0936002549c4
+langcode: und
+status: true
+dependencies: {  }
+id: menu-tc-resource-area
+label: Resources
+description: ''
+locked: false

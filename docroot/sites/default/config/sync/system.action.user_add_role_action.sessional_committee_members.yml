@@ -1,0 +1,14 @@
+uuid: ed457c62-def6-41bc-9d27-58ab1d5d7e7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sessional_committee_members
+  module:
+    - user
+id: user_add_role_action.sessional_committee_members
+label: 'Add the Sessional Committee Members role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: sessional_committee_members

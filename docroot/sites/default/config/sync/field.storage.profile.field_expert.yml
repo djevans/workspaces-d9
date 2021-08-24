@@ -1,0 +1,54 @@
+uuid: 4897ff73-445e-4c2c-9a69-812502ee128f
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_expert
+field_name: field_expert
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Aquatic mammals'
+      label: 'Aquatic mammals'
+    -
+      value: Birds
+      label: Birds
+    -
+      value: Fish
+      label: Fish
+    -
+      value: Test
+      label: Test
+    -
+      value: 'Marine Turtles'
+      label: 'Marine Turtles'
+    -
+      value: 'Terrestrial mammals'
+      label: 'Terrestrial mammals'
+    -
+      value: 'African fauna'
+      label: 'African fauna'
+    -
+      value: 'Asiatic fauna'
+      label: 'Asiatic fauna'
+    -
+      value: Bycatch
+      label: Bycatch
+    -
+      value: 'Climate Change'
+      label: 'Climate Change'
+    -
+      value: 'Neotropical fauna'
+      label: 'Neotropical fauna'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

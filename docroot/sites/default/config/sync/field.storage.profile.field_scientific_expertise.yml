@@ -1,0 +1,57 @@
+uuid: 72a721d0-debd-4cb6-9aeb-663971227e8b
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_scientific_expertise
+field_name: field_scientific_expertise
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Animal migration'
+      label: 'Animal migration'
+    -
+      value: Conservation_biology
+      label: 'Conservation biology'
+    -
+      value: Ecotourism_and_wildlife_watching
+      label: 'Ecotourism and wildlife watching'
+    -
+      value: EIA_SEA
+      label: 'Environmental Impact Assessment (EIA)/Strategic Environmental Assessment (SEA)'
+    -
+      value: Monitoring
+      label: Monitoring
+    -
+      value: Population_dynamics
+      label: 'Population dynamics'
+    -
+      value: Protected_areas
+      label: 'Protected areas'
+    -
+      value: Satellite_tracking
+      label: 'Satellite tracking'
+    -
+      value: Sustainable_use
+      label: 'Sustainable use'
+    -
+      value: Taxonomy
+      label: Taxonomy
+    -
+      value: Wildlife_disease
+      label: 'Wildlife disease'
+    -
+      value: Wildlife_trade
+      label: 'Wildlife trade'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

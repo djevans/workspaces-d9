@@ -1,0 +1,8 @@
+uuid: ab1a3b48-f2a7-42b4-a7a2-ccb0f6649233
+langcode: und
+status: true
+dependencies: {  }
+id: menu-test-menu
+label: 'Test menu'
+description: ''
+locked: false

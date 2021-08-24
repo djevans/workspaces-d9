@@ -1,0 +1,21 @@
+uuid: e229cf69-60f4-451b-95fd-c68ed0065caa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_geographic_region_expertis
+    - profile.type.scc_expertise
+  module:
+    - options
+id: profile.scc_expertise.field_geographic_region_expertis
+field_name: field_geographic_region_expertis
+entity_type: profile
+bundle: scc_expertise
+label: 'Geographic region(s) of expertise'
+description: 'For list of countries and regions - <a href="http://unstats.un.org/unsd/methods/m49/m49regin.htm" target="_blank">http://unstats.un.org/unsd/methods/m49/m49regin.htm</a>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

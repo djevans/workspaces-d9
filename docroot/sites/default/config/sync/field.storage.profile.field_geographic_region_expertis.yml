@@ -1,0 +1,39 @@
+uuid: daca13d6-5ea5-40c8-bd49-dc9df9ba9485
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_geographic_region_expertis
+field_name: field_geographic_region_expertis
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Africa
+      label: Africa
+    -
+      value: Americas
+      label: Americas
+    -
+      value: Asia
+      label: Asia
+    -
+      value: Europe
+      label: Europe
+    -
+      value: Oceania
+      label: Oceania
+    -
+      value: Other_Areas
+      label: 'Other Areas'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

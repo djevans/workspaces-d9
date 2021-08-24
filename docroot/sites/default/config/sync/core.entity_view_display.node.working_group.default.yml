@@ -1,0 +1,68 @@
+uuid: b357bb6b-bc5b-4da4-8845-9f1e9cf6d3fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_working_group.default
+    - field.field.node.working_group.body
+    - field.field.node.working_group.comment_node_working_group
+    - field.field.node.working_group.field_attachment
+    - field.field.node.working_group.field_wg_taxonomy
+    - field.field.node.working_group.group_access
+    - field.field.node.working_group.group_content_access
+    - field.field.node.working_group.group_group
+    - field.field.node.working_group.og_roles_permissions
+    - node.type.working_group
+  module:
+    - comment
+    - options
+    - text
+    - user
+id: node.working_group.default
+targetEntityType: node
+bundle: working_group
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_working_group:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_attachment:
+    label: hidden
+    weight: 4
+    type: entity_reference_entity_view
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  group_content_access:
+    label: above
+    weight: 6
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_wg_taxonomy: true
+  group_access: true
+  group_group: true
+  langcode: true
+  og_roles_permissions: true

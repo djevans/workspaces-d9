@@ -1,0 +1,67 @@
+uuid: bb0d9cfc-8ece-4c2e-9d2e-9c5ce8cb49bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.personal_information.field_additional_information_bio
+    - field.field.profile.personal_information.field_country_of_origin
+    - field.field.profile.personal_information.field_email
+    - field.field.profile.personal_information.field_first_name
+    - field.field.profile.personal_information.field_last_name
+    - field.field.profile.personal_information.field_title
+    - profile.type.personal_information
+id: profile.personal_information.default
+targetEntityType: profile
+bundle: personal_information
+mode: default
+content:
+  field_additional_information_bio:
+    weight: 6
+    type: string_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_country_of_origin:
+    weight: 4
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_email:
+    weight: 5
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_first_name:
+    weight: 2
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_last_name:
+    weight: 3
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 1
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  is_default: true

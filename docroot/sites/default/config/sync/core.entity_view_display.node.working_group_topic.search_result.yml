@@ -1,0 +1,48 @@
+uuid: f9e1fd3c-591b-4895-9810-d6fd4d7693b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.working_group_topic.body
+    - field.field.node.working_group_topic.comment_node_working_group_top
+    - field.field.node.working_group_topic.field_attachment
+    - field.field.node.working_group_topic.field_wg_taxonomy
+    - field.field.node.working_group_topic.group_content_access
+    - field.field.node.working_group_topic.og_group_ref
+    - node.type.working_group_topic
+  module:
+    - text
+    - user
+id: node.working_group_topic.search_result
+targetEntityType: node
+bundle: working_group_topic
+mode: search_result
+content:
+  body:
+    label: hidden
+    weight: 1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_attachment:
+    label: above
+    weight: 2
+    type: entity_reference_entity_view
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_working_group_top: true
+  field_wg_taxonomy: true
+  group_content_access: true
+  langcode: true
+  og_group_ref: true

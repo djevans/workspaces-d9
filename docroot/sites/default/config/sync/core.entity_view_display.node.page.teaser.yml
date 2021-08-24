@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.comment_node_page
+    - field.field.node.page.field_attachment
+    - field.field.node.page.field_tags
     - node.type.page
   module:
     - text
@@ -18,14 +21,16 @@ mode: teaser
 content:
   body:
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 100
-    region: content
-    settings:
-      trim_length: 600
+    weight: 0
+    type: text_default
+    settings: {  }
     third_party_settings: {  }
+    region: content
   links:
     weight: 101
     region: content
 hidden:
+  comment_node_page: true
+  field_attachment: true
+  field_tags: true
   langcode: true

@@ -1,0 +1,12 @@
+uuid: d8db5e6b-9778-42f0-99d8-d5b267314331
+langcode: en
+status: true
+dependencies: {  }
+id: personal_information
+label: 'Personal Information'
+display_label: null
+multiple: false
+registration: true
+roles: {  }
+allow_revisions: false
+new_revision: false

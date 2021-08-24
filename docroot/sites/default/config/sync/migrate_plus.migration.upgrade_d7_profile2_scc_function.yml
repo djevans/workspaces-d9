@@ -1,0 +1,88 @@
+uuid: 80793596-980f-4b83-aa17-fe3cc36773b5
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_profile2_scc_function
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Profile2 ()'
+source:
+  plugin: d7_profile2
+  constants:
+    status: 1
+    is_default: 1
+  bundle: scc_function
+process:
+  profile_id:
+    -
+      plugin: get
+      source: pid
+  type:
+    -
+      plugin: get
+      source: type
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: constants/status
+  is_default:
+    -
+      plugin: get
+      source: constants/is_default
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  field_profile_role:
+    -
+      plugin: get
+      source: field_profile_role
+  field_regional_representative_tc:
+    -
+      plugin: get
+      source: field_regional_representative_tc
+  field_expert:
+    -
+      plugin: get
+      source: field_expert
+  field_ngo_representative:
+    -
+      plugin: get
+      source: field_ngo_representative
+  field_observer:
+    -
+      plugin: get
+      source: field_observer
+  field_guest:
+    -
+      plugin: get
+      source: field_guest
+  field_tc_functions:
+    -
+      plugin: get
+      source: field_tc_functions
+  field_wg_member_extern:
+    -
+      plugin: get
+      source: field_wg_member_extern
+destination:
+  plugin: 'entity:profile'
+  default_bundle: scc_function
+migration_dependencies:
+  required:
+    - upgrade_d7_profile2_type
+  optional:
+    - upgrade_d7_field_instance

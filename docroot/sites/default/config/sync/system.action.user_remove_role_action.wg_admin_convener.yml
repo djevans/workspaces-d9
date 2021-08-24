@@ -1,0 +1,14 @@
+uuid: fca0723a-5e26-4c4d-9cbe-292acc6b070c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.wg_admin_convener
+  module:
+    - user
+id: user_remove_role_action.wg_admin_convener
+label: 'Remove the WG admin/Convener role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: wg_admin_convener

@@ -1,0 +1,12 @@
+uuid: 2a4f07cd-0a87-4e88-859d-baa3c83ae13e
+langcode: en
+status: true
+dependencies: {  }
+id: scc_function
+label: 'ScC Function'
+display_label: null
+multiple: false
+registration: true
+roles: {  }
+allow_revisions: false
+new_revision: false

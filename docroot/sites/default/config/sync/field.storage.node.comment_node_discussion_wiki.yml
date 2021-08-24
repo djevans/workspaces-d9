@@ -1,0 +1,20 @@
+uuid: 09b3a47f-237f-400b-b639-d0e0249a870f
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_discussion_wiki
+field_name: comment_node_discussion_wiki
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_discussion_wiki
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

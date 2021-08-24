@@ -1,0 +1,35 @@
+uuid: 51d8e949-76d9-46b8-8aae-1cb1b6eb975e
+langcode: en
+status: true
+dependencies: {  }
+id: sessional_committee_members
+label: 'Sessional Committee Members'
+weight: 16
+is_admin: null
+permissions:
+  - 'access user contact forms'
+  - 'create discussion_wiki content'
+  - 'create forum content'
+  - 'create link_or_resource content'
+  - 'edit any discussion_wiki content'
+  - 'edit own discussion_wiki content'
+  - 'edit own forum content'
+  - 'edit own link_or_resource content'
+  - 'edit own official_contact_information profile'
+  - 'edit own personal_information profile'
+  - 'edit own scc_expertise profile'
+  - 'edit revisions'
+  - 'save draft'
+  - 'search content'
+  - 'subscribe to taxonomy terms'
+  - 'suspend own subscriptions'
+  - 'use advanced search'
+  - 'view any official_contact_information profile'
+  - 'view any personal_information profile'
+  - 'view any scc_expertise profile'
+  - 'view own official_contact_information profile'
+  - 'view own personal_information profile'
+  - 'view own scc_expertise profile'
+  - 'view own unpublished content'
+  - 'view revision status messages'
+  - 'view revisions'

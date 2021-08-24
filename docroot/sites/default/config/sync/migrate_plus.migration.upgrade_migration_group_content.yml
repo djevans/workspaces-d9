@@ -1,0 +1,45 @@
+uuid: f33914fc-eeba-44c8-b9c4-857133dc8426
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_migration_group_content
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - 'Organic Groups'
+migration_group: migrate_drupal_7
+label: 'Migrate Group Content'
+source:
+  plugin: migration_group_d7_og_membership_nodes
+  og_group_type: node
+  entity_type: node
+  group_type: working_group
+process:
+  type:
+    -
+      plugin: get
+      source: group_content_type_id
+  gid:
+    -
+      plugin: get
+      source: gid
+  entity_id:
+    -
+      plugin: get
+      source: etid
+  uid:
+    -
+      plugin: get
+      source: uid
+  created:
+    -
+      plugin: get
+      source: created
+destination:
+  plugin: 'entity:group_content'
+migration_dependencies:
+  required:
+    - upgrade_migration_group_working_groups
+  optional: {  }

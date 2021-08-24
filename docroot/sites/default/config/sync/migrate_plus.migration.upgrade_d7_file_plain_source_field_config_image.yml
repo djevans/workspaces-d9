@@ -1,0 +1,60 @@
+uuid: 38286257-c4e8-4cf0-8bc1-03c2270a7a73
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_file_plain_source_field_config_image
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+  - 'Media Migration'
+  - 'Media Configuration'
+migration_group: migrate_drupal_7
+label: 'Plain file source field instance configuration (Image)'
+source:
+  plugin: d7_file_plain_source_field_instance
+  constants:
+    entity_type_id: media
+    required: true
+  mimes: image
+  schemes: public
+  destination_media_type_id: image
+process:
+  field_name:
+    -
+      plugin: get
+      source: source_field_name
+  entity_type:
+    0:
+      plugin: get
+      source: constants/entity_type_id
+    profile:
+      plugin: static_map
+      map:
+        profile2: profile
+      bypass: true
+  required:
+    -
+      plugin: get
+      source: constants/required
+  bundle:
+    -
+      plugin: get
+      source: bundle
+  label:
+    -
+      plugin: get
+      source: source_field_label
+  settings:
+    -
+      plugin: get
+      source: settings
+destination:
+  plugin: 'entity:field_config'
+migration_dependencies:
+  required:
+    - upgrade_d7_file_plain_source_field_image
+  optional:
+    - upgrade_d7_profile2_type

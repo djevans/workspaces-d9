@@ -1,0 +1,39 @@
+uuid: 90a7d58b-664a-4840-bd30-41764a825106
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_regional_representative_tc
+field_name: field_regional_representative_tc
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Africa
+      label: Africa
+    -
+      value: Asia
+      label: Asia
+    -
+      value: Europe
+      label: Europe
+    -
+      value: 'North America'
+      label: 'North America'
+    -
+      value: Oceania
+      label: Oceania
+    -
+      value: 'South and Central America and the Caribbean'
+      label: 'South and Central America and the Caribbean'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 12c9c0d4-d96f-4a06-90a2-6ef8c22ddf2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_full_address_of_institutio
+    - profile.type.official_contact_information
+id: profile.official_contact_information.field_full_address_of_institutio
+field_name: field_full_address_of_institutio
+entity_type: profile
+bundle: official_contact_information
+label: 'Full address of Institution'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

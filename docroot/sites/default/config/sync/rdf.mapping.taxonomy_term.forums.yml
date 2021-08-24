@@ -17,7 +17,16 @@ types:
 fieldMappings:
   name:
     properties:
-      - 'schema:name'
+      - 'rdfs:label'
+      - 'skos:prefLabel'
   description:
     properties:
-      - 'schema:description'
+      - 'skos:definition'
+  vid:
+    properties:
+      - 'skos:inScheme'
+    mapping_type: rel
+  parent:
+    properties:
+      - 'skos:broader'
+    mapping_type: rel

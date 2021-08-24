@@ -1,0 +1,21 @@
+uuid: 6cd363c1-d1ce-4d9b-902e-c8506beedd94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_habitat_expertise
+    - profile.type.scc_expertise
+  module:
+    - options
+id: profile.scc_expertise.field_habitat_expertise
+field_name: field_habitat_expertise
+entity_type: profile
+bundle: scc_expertise
+label: 'Habitat Expertise'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

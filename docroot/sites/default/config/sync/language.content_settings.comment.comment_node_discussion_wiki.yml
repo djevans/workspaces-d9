@@ -1,0 +1,11 @@
+uuid: f388f833-a120-4bd5-bd20-0e0948b104d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_discussion_wiki
+id: comment.comment_node_discussion_wiki
+target_entity_type_id: comment
+target_bundle: comment_node_discussion_wiki
+default_langcode: site_default
+language_alterable: false

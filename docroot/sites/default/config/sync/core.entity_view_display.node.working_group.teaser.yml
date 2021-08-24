@@ -1,0 +1,45 @@
+uuid: 3002dd25-d37c-4d56-80e3-abd541b49215
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.working_group.body
+    - field.field.node.working_group.comment_node_working_group
+    - field.field.node.working_group.field_attachment
+    - field.field.node.working_group.field_wg_taxonomy
+    - field.field.node.working_group.group_access
+    - field.field.node.working_group.group_content_access
+    - field.field.node.working_group.group_group
+    - field.field.node.working_group.og_roles_permissions
+    - node.type.working_group
+  module:
+    - text
+    - user
+id: node.working_group.teaser
+targetEntityType: node
+bundle: working_group
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 1
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_working_group: true
+  field_attachment: true
+  field_wg_taxonomy: true
+  group_access: true
+  group_content_access: true
+  group_group: true
+  langcode: true
+  og_roles_permissions: true

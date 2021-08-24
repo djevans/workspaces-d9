@@ -1,0 +1,21 @@
+uuid: 77ef5335-6a4f-4212-8af5-f12423d08780
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_expertise_taxonomic_groups
+    - profile.type.scc_expertise
+  module:
+    - options
+id: profile.scc_expertise.field_expertise_taxonomic_groups
+field_name: field_expertise_taxonomic_groups
+entity_type: profile
+bundle: scc_expertise
+label: 'Expertise on the following taxonomic groups'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

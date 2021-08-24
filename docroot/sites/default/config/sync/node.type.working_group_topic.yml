@@ -1,0 +1,18 @@
+uuid: ce92a7a9-a188-45af-b37a-ca904183cb8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - menu-tc-working-area
+    parent: 'menu-tc-working-area:0:'
+name: 'Working group topic'
+type: working_group_topic
+description: 'Working group topic is a topic under a particular Working Group.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

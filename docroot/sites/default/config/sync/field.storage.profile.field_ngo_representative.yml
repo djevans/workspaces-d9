@@ -1,0 +1,21 @@
+uuid: cc9f1f0b-20bf-4383-85d3-8bcf08fb9bd2
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_ngo_representative
+field_name: field_ngo_representative
+entity_type: profile
+type: string
+settings:
+  max_length: 1000
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

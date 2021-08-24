@@ -1,0 +1,30 @@
+uuid: 6b2ad6cb-e64e-41a3-a142-dee831fdb50a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.og_group_ref
+  module:
+    - user
+id: user.user.og_group_ref
+field_name: og_group_ref
+entity_type: user
+bundle: user
+label: 'Groups audience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      og_behavior:
+        status: true
+    target_bundles: null
+    membership_type: og_membership_type_default
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

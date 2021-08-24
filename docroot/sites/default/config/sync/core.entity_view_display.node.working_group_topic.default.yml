@@ -1,0 +1,71 @@
+uuid: eed1dc7e-3ac4-4892-a98a-0ad0aea5c75d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_working_group_top.default
+    - field.field.node.working_group_topic.body
+    - field.field.node.working_group_topic.comment_node_working_group_top
+    - field.field.node.working_group_topic.field_attachment
+    - field.field.node.working_group_topic.field_wg_taxonomy
+    - field.field.node.working_group_topic.group_content_access
+    - field.field.node.working_group_topic.og_group_ref
+    - node.type.working_group_topic
+  module:
+    - comment
+    - options
+    - text
+    - user
+id: node.working_group_topic.default
+targetEntityType: node
+bundle: working_group_topic
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_working_group_top:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_attachment:
+    label: hidden
+    weight: 2
+    type: entity_reference_entity_view
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_wg_taxonomy:
+    label: above
+    weight: 3
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  group_content_access:
+    label: above
+    weight: 4
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  og_group_ref: true

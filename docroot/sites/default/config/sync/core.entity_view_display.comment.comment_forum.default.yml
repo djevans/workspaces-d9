@@ -16,11 +16,11 @@ mode: default
 content:
   comment_body:
     label: hidden
-    type: text_default
     weight: 0
-    region: content
+    type: text_default
     settings: {  }
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
     region: content

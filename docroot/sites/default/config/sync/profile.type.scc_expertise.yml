@@ -1,0 +1,12 @@
+uuid: 6a8bb5d2-7176-4fd0-861a-6bb92367e624
+langcode: en
+status: true
+dependencies: {  }
+id: scc_expertise
+label: 'ScC Expertise'
+display_label: null
+multiple: false
+registration: true
+roles: {  }
+allow_revisions: false
+new_revision: false

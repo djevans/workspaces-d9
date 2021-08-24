@@ -1,0 +1,63 @@
+uuid: 7a84753d-2590-4fb6-8dac-5bce0c6b097e
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_expertise_on_threats
+field_name: field_expertise_on_threats
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Bycatch
+      label: Bycatch
+    -
+      value: Climate_change
+      label: 'Climate change'
+    -
+      value: Energy_and_other_infrastructure_(e.g._power_lines)
+      label: 'Energy and other infrastructure (e.g. power lines)'
+    -
+      value: Shipping
+      label: 'Shipping (e.g. collision)'
+    -
+      value: Disease_and_pathogens
+      label: 'Disease and pathogens'
+    -
+      value: Habitat_loss_and_fragmentation
+      label: 'Habitat loss and fragmentation'
+    -
+      value: Illegal_trade
+      label: 'Illegal trade'
+    -
+      value: Invasive_alien_species
+      label: 'Invasive alien species'
+    -
+      value: Light_pollution
+      label: 'Light pollution'
+    -
+      value: Marine_debris
+      label: 'Marine debris'
+    -
+      value: Noise
+      label: Noise
+    -
+      value: Overexploitation
+      label: Overexploitation
+    -
+      value: Pollution
+      label: Pollution
+    -
+      value: Renewable_energy
+      label: 'Renewable energy'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

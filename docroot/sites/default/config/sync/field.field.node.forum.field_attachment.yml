@@ -1,0 +1,32 @@
+uuid: 8d624658-0229-4f6b-8733-7b326ba04ff1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachment
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.forum
+id: node.forum.field_attachment
+field_name: field_attachment
+entity_type: node
+bundle: forum
+label: Attachment
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    target_bundles:
+      audio: audio
+      document: document
+      image: image
+      remote_video: remote_video
+      video: video
+  handler: 'default:media'
+field_type: entity_reference

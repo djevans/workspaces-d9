@@ -1,0 +1,21 @@
+uuid: c20f03f7-d194-478e-8c43-462d6245b69d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_scientific_expertise
+    - profile.type.scc_expertise
+  module:
+    - options
+id: profile.scc_expertise.field_scientific_expertise
+field_name: field_scientific_expertise
+entity_type: profile
+bundle: scc_expertise
+label: 'Scientific expertise'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

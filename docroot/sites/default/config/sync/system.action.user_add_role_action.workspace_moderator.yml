@@ -1,0 +1,14 @@
+uuid: 6ea63b8c-2f14-44be-8671-3caf3dace65e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.workspace_moderator
+  module:
+    - user
+id: user_add_role_action.workspace_moderator
+label: 'Add the Workspace Moderator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: workspace_moderator

@@ -1,0 +1,23 @@
+uuid: b79b1f6b-8071-46a7-88a2-e234c33a0bbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.working_group_topic
+  module:
+    - text
+id: node.working_group_topic.body
+field_name: body
+entity_type: node
+bundle: working_group_topic
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

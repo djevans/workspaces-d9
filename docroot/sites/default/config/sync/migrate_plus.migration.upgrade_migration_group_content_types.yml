@@ -1,0 +1,25 @@
+uuid: 8d35f3ef-472d-4abf-812f-2484e5ce1525
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_migration_group_content_types
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - 'Organic Groups'
+migration_group: migrate_drupal_7
+label: 'Migrate Group Content Types'
+source:
+  plugin: migration_group_d7_og_group_content_types
+process:
+  id:
+    -
+      plugin: get
+      source: type
+destination:
+  plugin: 'migration_group:group_content_type'
+migration_dependencies:
+  required: {  }
+  optional: {  }

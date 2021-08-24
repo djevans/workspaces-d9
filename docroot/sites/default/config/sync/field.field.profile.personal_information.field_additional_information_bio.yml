@@ -1,0 +1,19 @@
+uuid: d97be0ba-64c9-46f6-a0a9-410d7efebbba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_additional_information_bio
+    - profile.type.personal_information
+id: profile.personal_information.field_additional_information_bio
+field_name: field_additional_information_bio
+entity_type: profile
+bundle: personal_information
+label: 'Additional Information/ Biography'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

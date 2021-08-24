@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.comment_node_page
+    - field.field.node.page.field_attachment
+    - field.field.node.page.field_tags
     - node.type.page
   module:
+    - comment
+    - media_library
     - path
     - text
 _core:
@@ -16,21 +21,44 @@ bundle: page
 mode: default
 content:
   body:
+    weight: -4
     type: text_textarea_with_summary
-    weight: 31
-    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
+    region: content
+  comment_node_page:
+    type: comment_default
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_attachment:
+    weight: -2
+    type: media_library_widget
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    weight: 0
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 2

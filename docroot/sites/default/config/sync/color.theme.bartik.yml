@@ -1,0 +1,18 @@
+cms:
+  - 'public://color/bartik_cms-e16fec7b/colors.css'
+files:
+  - 'public://color/bartik-42e48acd/logo.png'
+  - 'public://color/bartik-42e48acd/colors.css'
+logo: 'public://color/bartik-42e48acd/logo.png'
+palette:
+  top: '#a6a3a3'
+  bottom: '#e4e4e4'
+  bg: '#ffffff'
+  sidebar: '#f6f6f2'
+  sidebarborders: '#f9f9f9'
+  footer: '#292929'
+  titleslogan: '#fffeff'
+  text: '#3b3b3b'
+  link: '#0071B3'
+stylesheets:
+  - 'public://color/bartik-42e48acd/colors.css'

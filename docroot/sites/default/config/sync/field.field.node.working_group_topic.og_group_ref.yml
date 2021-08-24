@@ -1,0 +1,29 @@
+uuid: 64cb6ab6-ec54-4b96-9531-96e74ed78f04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_group_ref
+    - node.type.working_group_topic
+id: node.working_group_topic.og_group_ref
+field_name: og_group_ref
+entity_type: node
+bundle: working_group_topic
+label: 'Groups audience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      og_behavior:
+        status: true
+    target_bundles: null
+    membership_type: og_membership_type_default
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

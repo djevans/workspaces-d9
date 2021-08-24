@@ -1,0 +1,19 @@
+uuid: 0d6a76e0-0e47-4864-ab33-e7dc4b26bad0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_guest
+    - profile.type.scc_function
+id: profile.scc_function.field_guest
+field_name: field_guest
+entity_type: profile
+bundle: scc_function
+label: 'None of the above (Guest)'
+description: 'You are a Guest? Please specify'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

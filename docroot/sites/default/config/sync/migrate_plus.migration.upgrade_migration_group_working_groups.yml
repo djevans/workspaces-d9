@@ -1,0 +1,40 @@
+uuid: 5de51279-0a17-454b-b888-2d45b383cfed
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_migration_group_working_groups
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - 'Organic Groups'
+migration_group: migrate_drupal_7
+label: 'Insert Working Groups'
+source:
+  plugin: d7_node
+  node_type: working_group
+process:
+  type:
+    -
+      plugin: get
+      source: type
+  id:
+    -
+      plugin: get
+      source: nid
+  label:
+    -
+      plugin: get
+      source: title
+  path:
+    -
+      plugin: get
+      source: alias
+destination:
+  plugin: 'entity:group'
+migration_dependencies:
+  required:
+    - upgrade_migration_group_types
+  optional:
+    - upgrade_d7_field_instance

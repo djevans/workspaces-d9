@@ -1,0 +1,19 @@
+uuid: b6771be2-768f-48b7-91a3-fdf0e996a01a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_wg_member_extern
+    - profile.type.scc_function
+id: profile.scc_function.field_wg_member_extern
+field_name: field_wg_member_extern
+entity_type: profile
+bundle: scc_function
+label: 'Working Group Member (external expert)'
+description: 'You are an invited expert to one or more of the Working Groups? Please specify which Working Group.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,37 @@
+uuid: d0ee2c33-4bc8-4f7c-9303-11693b0bf4ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.discussion_wiki.body
+    - field.field.node.discussion_wiki.comment_node_discussion_wiki
+    - field.field.node.discussion_wiki.field_attachment
+    - field.field.node.discussion_wiki.og_group_ref
+    - node.type.discussion_wiki
+  module:
+    - text
+    - user
+id: node.discussion_wiki.teaser
+targetEntityType: node
+bundle: discussion_wiki
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_discussion_wiki: true
+  field_attachment: true
+  langcode: true
+  og_group_ref: true

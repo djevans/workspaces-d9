@@ -1,0 +1,19 @@
+uuid: 2b0b0fd8-65d3-42a0-969b-174fb2451571
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_country_of_origin
+    - profile.type.personal_information
+id: profile.personal_information.field_country_of_origin
+field_name: field_country_of_origin
+entity_type: profile
+bundle: personal_information
+label: 'Country of origin'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

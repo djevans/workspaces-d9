@@ -1,0 +1,19 @@
+uuid: 41da185b-c1d7-4eae-9212-17db950e5116
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_email
+    - profile.type.personal_information
+id: profile.personal_information.field_email
+field_name: field_email
+entity_type: profile
+bundle: personal_information
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

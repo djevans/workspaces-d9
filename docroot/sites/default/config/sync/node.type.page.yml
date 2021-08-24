@@ -1,13 +1,25 @@
 uuid: dcfe2b93-2f52-4c8b-9688-9dcdcc189f4a
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+      - menu-public-area
+      - menu-tc-discussion-area
+      - menu-tc-member-s-area
+      - menu-tc-resource-area
+      - menu-tc-working-area
+    parent: 'main-menu:0:'
 _core:
   default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
 name: 'Basic page'
 type: page
 description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
 display_submitted: false

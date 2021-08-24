@@ -1,0 +1,14 @@
+features:
+  name: true
+  slogan: true
+  node_user_picture: false
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+logo:
+  use_default: false
+  path: 'public://foliage_logo_0.gif'
+favicon:
+  use_default: false
+  path: 'public://favicon_0.ico'
+  mimetype: image/vnd.microsoft.icon

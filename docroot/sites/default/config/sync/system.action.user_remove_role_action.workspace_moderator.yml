@@ -1,0 +1,14 @@
+uuid: 94639c56-4483-49e5-ba13-b13a841c8be0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.workspace_moderator
+  module:
+    - user
+id: user_remove_role_action.workspace_moderator
+label: 'Remove the Workspace Moderator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: workspace_moderator
