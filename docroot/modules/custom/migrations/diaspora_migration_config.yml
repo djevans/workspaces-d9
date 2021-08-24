@@ -1,5 +1,0 @@
-id: diaspora_migration_config
-label: Diaspora Config Migration
-migration_dependencies:
-  required:
-    -
