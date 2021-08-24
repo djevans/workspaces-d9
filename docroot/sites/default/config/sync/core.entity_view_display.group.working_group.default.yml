@@ -1,0 +1,53 @@
+uuid: a2f13e7c-89e7-43c5-b721-eafca4057d48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.working_group.field_attachment
+    - field.field.group.working_group.field_body
+    - field.field.group.working_group.field_wg_taxonomy
+    - group.type.working_group
+  module:
+    - text
+id: group.working_group.default
+targetEntityType: group
+bundle: working_group
+mode: default
+content:
+  field_attachment:
+    type: entity_reference_entity_view
+    weight: -3
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_body:
+    weight: -4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_wg_taxonomy:
+    weight: -2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  label:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  langcode: true
+  uid: true

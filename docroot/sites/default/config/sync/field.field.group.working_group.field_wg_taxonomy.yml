@@ -1,14 +1,14 @@
-uuid: 4f02bce5-98ce-488e-842a-839f8c8a6821
+uuid: e81a1779-7059-45ab-8da1-ad9626f3914d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_wg_taxonomy
-    - node.type.working_group
+    - field.storage.group.field_wg_taxonomy
+    - group.type.working_group
     - taxonomy.vocabulary.working_group
-id: node.working_group.field_wg_taxonomy
+id: group.working_group.field_wg_taxonomy
 field_name: field_wg_taxonomy
-entity_type: node
+entity_type: group
 bundle: working_group
 label: 'WG taxonomy'
 description: ''
@@ -17,10 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:taxonomy_term'
   handler_settings:
-    sort:
-      field: _none
     target_bundles:
       working_group: working_group
-  handler: 'default:taxonomy_term'
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

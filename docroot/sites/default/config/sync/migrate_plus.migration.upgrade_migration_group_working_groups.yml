@@ -31,6 +31,28 @@ process:
     -
       plugin: get
       source: alias
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  field_body:
+    -
+      plugin: get
+      source: body
+  field_attachment:
+    -
+      plugin: media_migration_delta_sort
+      source: field_attachment
+    -
+      plugin: sub_process
+      process:
+        target_id: fid
+  field_wg_taxonomy:
+    -
+      plugin: sub_process
+      source: field_wg_taxonomy
+      process:
+        target_id: tid
 destination:
   plugin: 'entity:group'
 migration_dependencies:

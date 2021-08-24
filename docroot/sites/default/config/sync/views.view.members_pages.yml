@@ -1,0 +1,1577 @@
+uuid: d5e737d4-16c6-4e3e-84cb-51c8be8d1ae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_country_of_origin
+    - field.storage.profile.field_email
+    - field.storage.profile.field_first_name
+    - field.storage.profile.field_last_name
+    - field.storage.user.user_picture
+    - image.style.thumbnail
+    - user.role.cms_secretariat
+    - user.role.invited_expert
+    - user.role.scc_members
+  module:
+    - image
+    - options
+    - profile
+    - user
+id: members_pages
+label: 'Members pages'
+module: views
+description: ''
+tag: ''
+base_table: users_field_data
+base_field: uid
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'view any profile'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: full
+        options:
+          items_per_page: 30
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      style:
+        type: table
+      row:
+        type: fields
+      fields:
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: user
+          entity_field: uid
+          plugin_id: field
+        field_first_name:
+          id: field_first_name
+          table: profile__field_first_name
+          field: field_first_name
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          label: 'First name'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_last_name:
+          id: field_last_name
+          table: profile__field_last_name
+          field: field_last_name
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          label: 'Last name'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_country_of_origin:
+          id: field_country_of_origin
+          table: profile__field_country_of_origin
+          field: field_country_of_origin
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          label: 'Country of origin'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_email:
+          id: field_email
+          table: profile__field_email
+          field: field_email
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          label: Email
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        user_picture:
+          id: user_picture
+          table: user__user_picture
+          field: user_picture
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Picture
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: thumbnail
+            image_link: content
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      filters:
+        roles_target_id:
+          id: roles_target_id
+          table: user__roles
+          field: roles_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            scc_members: scc_members
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
+        status:
+          value: '1'
+          table: users_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: user
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_first_name_value:
+          id: field_first_name_value
+          table: profile__field_first_name
+          field: field_first_name_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_first_name_value_op
+            label: 'First name'
+            description: ''
+            use_operator: false
+            operator: field_first_name_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: first_name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              wg_admin_convener: '0'
+              scc_members: '0'
+              guest: '0'
+              super_admin: '0'
+              workspace_moderator: '0'
+              cms_secretariat: '0'
+              invited_expert: '0'
+              councillor: '0'
+              sessional_committee_members: '0'
+              edw_healthcheck_role: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        field_last_name_value:
+          id: field_last_name_value
+          table: profile__field_last_name
+          field: field_last_name_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_last_name_value_op
+            label: 'Last name'
+            description: ''
+            use_operator: false
+            operator: field_last_name_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: last_name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              wg_admin_convener: '0'
+              scc_members: '0'
+              guest: '0'
+              super_admin: '0'
+              workspace_moderator: '0'
+              cms_secretariat: '0'
+              invited_expert: '0'
+              councillor: '0'
+              sessional_committee_members: '0'
+              edw_healthcheck_role: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+      sorts:
+        field_first_name_value:
+          id: field_first_name_value
+          table: profile__field_first_name
+          field: field_first_name_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+        created:
+          id: created
+          table: users_field_data
+          field: created
+          order: ASC
+          entity_type: user
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: 'Members of the Scientific Council Workspace'
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: 'Header for ScC member page'
+          empty: false
+          tokenize: false
+          content:
+            value: 'Attached are the most up-to-date lists of Scientific Councillors and COP-Appointed Scientific Councillors (administrative and on technical matters). These lists will be regularly revised by the CMS Secretariat. Leave the first name and last name blank and click on Apply to see the entire list.'
+            format: filtered_html
+          plugin_id: text
+      footer: {  }
+      empty: {  }
+      relationships:
+        profile_type:
+          id: profile_type
+          table: users_field_data
+          field: profile_type
+          relationship: none
+          group_type: group
+          admin_label: 'Personal Information'
+          required: true
+          profile_type: personal_information
+          entity_type: user
+          plugin_id: profile_relationship
+      arguments: {  }
+      display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags:
+        - 'config:field.storage.profile.field_country_of_origin'
+        - 'config:field.storage.profile.field_email'
+        - 'config:field.storage.profile.field_first_name'
+        - 'config:field.storage.profile.field_last_name'
+        - 'config:field.storage.user.user_picture'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: 'Members Page'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: scc-members
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags:
+        - 'config:field.storage.profile.field_country_of_origin'
+        - 'config:field.storage.profile.field_email'
+        - 'config:field.storage.profile.field_first_name'
+        - 'config:field.storage.profile.field_last_name'
+        - 'config:field.storage.user.user_picture'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: 'Members Expertise Page'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: 'Header for ScC members'' expertise page'
+          empty: false
+          tokenize: false
+          content:
+            value: 'Attached are the most up-to-date lists of Scientific Councillors and COP-Appointed Scientific Councillors (administrative and on technical matters). These lists will be regularly revised by the CMS Secretariat.'
+            format: filtered_html
+          plugin_id: text
+      defaults:
+        header: false
+        title: false
+        relationships: false
+        filters: false
+        filter_groups: false
+        pager: false
+      title: 'CMS users'
+      path: users-expertise
+      relationships:
+        profile_type:
+          id: profile_type
+          table: users_field_data
+          field: profile_type
+          relationship: none
+          group_type: group
+          admin_label: 'Personal Information'
+          required: true
+          profile_type: personal_information
+          entity_type: user
+          plugin_id: profile_relationship
+        profile_type_1:
+          id: profile_type_1
+          table: users_field_data
+          field: profile_type
+          relationship: none
+          group_type: group
+          admin_label: 'ScC Expertise'
+          required: true
+          profile_type: scc_expertise
+          entity_type: user
+          plugin_id: profile_relationship
+      filters:
+        status:
+          value: '1'
+          table: users_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: user
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_first_name_value:
+          id: field_first_name_value
+          table: profile__field_first_name
+          field: field_first_name_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_first_name_value_op
+            label: 'First name'
+            description: ''
+            use_operator: false
+            operator: field_first_name_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: first_name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              wg_admin_convener: '0'
+              scc_members: '0'
+              guest: '0'
+              super_admin: '0'
+              workspace_moderator: '0'
+              cms_secretariat: '0'
+              invited_expert: '0'
+              councillor: '0'
+              sessional_committee_members: '0'
+              edw_healthcheck_role: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        field_last_name_value:
+          id: field_last_name_value
+          table: profile__field_last_name
+          field: field_last_name_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_last_name_value_op
+            label: 'Last name'
+            description: ''
+            use_operator: false
+            operator: field_last_name_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: last_name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              wg_admin_convener: '0'
+              scc_members: '0'
+              guest: '0'
+              super_admin: '0'
+              workspace_moderator: '0'
+              cms_secretariat: '0'
+              invited_expert: '0'
+              councillor: '0'
+              sessional_committee_members: '0'
+              edw_healthcheck_role: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        field_expertise_taxonomic_groups_value:
+          id: field_expertise_taxonomic_groups_value
+          table: profile__field_expertise_taxonomic_groups
+          field: field_expertise_taxonomic_groups_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_expertise_taxonomic_groups_value_op
+            label: 'Expertise on the following taxonomic groups'
+            description: ''
+            use_operator: false
+            operator: field_expertise_taxonomic_groups_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_expertise_taxonomic_groups_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              wg_admin_convener: '0'
+              scc_members: '0'
+              guest: '0'
+              super_admin: '0'
+              workspace_moderator: '0'
+              cms_secretariat: '0'
+              invited_expert: '0'
+              councillor: '0'
+              sessional_committee_members: '0'
+              edw_healthcheck_role: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_expertise_on_threats_value:
+          id: field_expertise_on_threats_value
+          table: profile__field_expertise_on_threats
+          field: field_expertise_on_threats_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_expertise_on_threats_value_op
+            label: 'Expertise on threats'
+            description: ''
+            use_operator: false
+            operator: field_expertise_on_threats_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: expertise_on_threats
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              wg_admin_convener: '0'
+              scc_members: '0'
+              guest: '0'
+              super_admin: '0'
+              workspace_moderator: '0'
+              cms_secretariat: '0'
+              invited_expert: '0'
+              councillor: '0'
+              sessional_committee_members: '0'
+              edw_healthcheck_role: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_geographic_region_expertis_value:
+          id: field_geographic_region_expertis_value
+          table: profile__field_geographic_region_expertis
+          field: field_geographic_region_expertis_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_geographic_region_expertis_value_op
+            label: 'Geographic region(s) of expertise'
+            description: ''
+            use_operator: false
+            operator: field_geographic_region_expertis_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: geographic_region_expertise
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              wg_admin_convener: '0'
+              scc_members: '0'
+              guest: '0'
+              super_admin: '0'
+              workspace_moderator: '0'
+              cms_secretariat: '0'
+              invited_expert: '0'
+              councillor: '0'
+              sessional_committee_members: '0'
+              edw_healthcheck_role: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_habitat_expertise_value:
+          id: field_habitat_expertise_value
+          table: profile__field_habitat_expertise
+          field: field_habitat_expertise_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_habitat_expertise_value_op
+            label: 'Habitat Expertise'
+            description: ''
+            use_operator: false
+            operator: field_habitat_expertise_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: habitat_expertise
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              wg_admin_convener: '0'
+              scc_members: '0'
+              guest: '0'
+              super_admin: '0'
+              workspace_moderator: '0'
+              cms_secretariat: '0'
+              invited_expert: '0'
+              councillor: '0'
+              sessional_committee_members: '0'
+              edw_healthcheck_role: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_scientific_expertise_value:
+          id: field_scientific_expertise_value
+          table: profile__field_scientific_expertise
+          field: field_scientific_expertise_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_scientific_expertise_value_op
+            label: 'Scientific expertise'
+            description: ''
+            use_operator: false
+            operator: field_scientific_expertise_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: scientific_expertise
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              wg_admin_convener: '0'
+              scc_members: '0'
+              guest: '0'
+              super_admin: '0'
+              workspace_moderator: '0'
+              cms_secretariat: '0'
+              invited_expert: '0'
+              councillor: '0'
+              sessional_committee_members: '0'
+              edw_healthcheck_role: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_working_languages_value:
+          id: field_working_languages_value
+          table: profile__field_working_languages
+          field: field_working_languages_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_working_languages_value_op
+            label: 'Working languages'
+            description: ''
+            use_operator: false
+            operator: field_working_languages_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: working_languages
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              wg_admin_convener: '0'
+              scc_members: '0'
+              guest: '0'
+              super_admin: '0'
+              workspace_moderator: '0'
+              cms_secretariat: '0'
+              invited_expert: '0'
+              councillor: '0'
+              sessional_committee_members: '0'
+              edw_healthcheck_role: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      pager:
+        type: full
+        options:
+          items_per_page: 15
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags:
+        - 'config:field.storage.profile.field_country_of_origin'
+        - 'config:field.storage.profile.field_email'
+        - 'config:field.storage.profile.field_first_name'
+        - 'config:field.storage.profile.field_last_name'
+        - 'config:field.storage.user.user_picture'
+  page_3:
+    display_plugin: page
+    id: page_3
+    display_title: 'Secretariat Page'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: 'Header for secretariat page'
+          empty: false
+          tokenize: false
+          content:
+            value: 'Here is the up-to-date list of the CMS Secretariat'
+            format: filtered_html
+          plugin_id: text
+      defaults:
+        header: false
+        title: false
+        filters: false
+        filter_groups: false
+        pager: false
+      title: 'Members of the CMS Secretariat'
+      path: secretariat
+      filters:
+        roles_target_id:
+          id: roles_target_id
+          table: user__roles
+          field: roles_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            cms_secretariat: cms_secretariat
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
+        status:
+          value: '1'
+          table: users_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: user
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      pager:
+        type: full
+        options:
+          items_per_page: 15
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.permissions
+      tags:
+        - 'config:field.storage.profile.field_country_of_origin'
+        - 'config:field.storage.profile.field_email'
+        - 'config:field.storage.profile.field_first_name'
+        - 'config:field.storage.profile.field_last_name'
+        - 'config:field.storage.user.user_picture'
+  page_4:
+    display_plugin: page
+    id: page_4
+    display_title: 'Invited Experts Page'
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      title: 'Invited Experts'
+      defaults:
+        title: false
+        header: false
+        filters: false
+        filter_groups: false
+      path: invited-experts
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: 'Header for invited experts page'
+          empty: false
+          tokenize: false
+          content:
+            value: 'Attached are the most up-to-date lists of Invited Experts (administrative and on technical matters). These lists will be regularly revised by the CMS Secretariat. Leave the first name and last name blank and click on Apply to see the entire list.'
+            format: filtered_html
+          plugin_id: text
+      filters:
+        roles_target_id:
+          id: roles_target_id
+          table: user__roles
+          field: roles_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            invited_expert: invited_expert
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
+        status:
+          value: '1'
+          table: users_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: user
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_first_name_value:
+          id: field_first_name_value
+          table: profile__field_first_name
+          field: field_first_name_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_first_name_value_op
+            label: 'First name'
+            description: ''
+            use_operator: false
+            operator: field_first_name_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: first_name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              wg_admin_convener: '0'
+              scc_members: '0'
+              guest: '0'
+              super_admin: '0'
+              workspace_moderator: '0'
+              cms_secretariat: '0'
+              invited_expert: '0'
+              councillor: '0'
+              sessional_committee_members: '0'
+              edw_healthcheck_role: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        field_last_name_value:
+          id: field_last_name_value
+          table: profile__field_last_name
+          field: field_last_name_value
+          relationship: profile_type
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_last_name_value_op
+            label: 'Last name'
+            description: ''
+            use_operator: false
+            operator: field_last_name_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: last_name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              wg_admin_convener: '0'
+              scc_members: '0'
+              guest: '0'
+              super_admin: '0'
+              workspace_moderator: '0'
+              cms_secretariat: '0'
+              invited_expert: '0'
+              councillor: '0'
+              sessional_committee_members: '0'
+              edw_healthcheck_role: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags:
+        - 'config:field.storage.profile.field_country_of_origin'
+        - 'config:field.storage.profile.field_email'
+        - 'config:field.storage.profile.field_first_name'
+        - 'config:field.storage.profile.field_last_name'
+        - 'config:field.storage.user.user_picture'

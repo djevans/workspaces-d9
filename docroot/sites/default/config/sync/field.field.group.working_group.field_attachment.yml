@@ -1,18 +1,15 @@
-uuid: a2edaddb-49f8-46fa-8ebd-db31e582e912
+uuid: ca42649d-0ff5-430c-a9fc-e1fd498377fe
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_attachment
-    - media.type.audio
+    - field.storage.group.field_attachment
+    - group.type.working_group
     - media.type.document
     - media.type.image
-    - media.type.remote_video
-    - media.type.video
-    - node.type.working_group
-id: node.working_group.field_attachment
+id: group.working_group.field_attachment
 field_name: field_attachment
-entity_type: node
+entity_type: group
 bundle: working_group
 label: Attachment
 description: ''
@@ -21,12 +18,14 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:media'
   handler_settings:
     target_bundles:
-      audio: audio
       document: document
       image: image
-      remote_video: remote_video
-      video: video
-  handler: 'default:media'
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: document
 field_type: entity_reference

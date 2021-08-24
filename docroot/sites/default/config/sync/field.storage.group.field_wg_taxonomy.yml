@@ -1,0 +1,20 @@
+uuid: e2a1b03d-a2db-4964-86ff-18add556428e
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - taxonomy
+id: group.field_wg_taxonomy
+field_name: field_wg_taxonomy
+entity_type: group
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
