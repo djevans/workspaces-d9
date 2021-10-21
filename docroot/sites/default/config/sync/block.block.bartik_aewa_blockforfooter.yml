@@ -1,0 +1,42 @@
+uuid: 1e2caa76-ec0b-404f-afae-18ef157467cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+  theme:
+    - bartik_aewa
+id: bartik_aewa_blockforfooter
+theme: bartik_aewa
+region: footer_fifth
+weight: 0
+provider: null
+plugin: 'block_content:df1e2223-10d2-478e-b947-c4dc70d2fe39'
+settings:
+  id: 'block_content:df1e2223-10d2-478e-b947-c4dc70d2fe39'
+  label: 'Block for footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_status:
+    id: user_status
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  context_all:
+    id: context_all
+    values: ''
+    negate: null
+  context:
+    id: context
+    values: ''
+    negate: null

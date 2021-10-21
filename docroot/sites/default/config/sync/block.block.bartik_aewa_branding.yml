@@ -1,0 +1,25 @@
+uuid: 01e90de2-d50e-4dbc-9c8b-d2697a98fa6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bartik_aewa
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: bartik_aewa_branding
+theme: bartik_aewa
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

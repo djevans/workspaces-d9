@@ -6,13 +6,9 @@ dependencies:
     - system.menu.account
     - system.menu.main
     - system.menu.tools
-  content:
-    - 'block_content:basic:df1e2223-10d2-478e-b947-c4dc70d2fe39'
   module:
-    - block_content
     - group
     - help
-    - language
     - system
     - user
 name: site_wide
@@ -43,21 +39,6 @@ reactions:
         context_id: site_wide
         third_party_settings: {  }
         uuid: fd252381-b208-4864-82c9-a07c66ecca0b
-      7dde4d22-6265-4fd5-99a9-4dd8b26f6bc8:
-        id: 'language_block:language_interface'
-        label: 'Language switcher'
-        provider: language
-        label_display: '0'
-        region: header
-        weight: '0'
-        context_mapping: {  }
-        custom_id: language_block_language_interface
-        theme: bartik_aewa
-        css_class: ''
-        unique: 0
-        context_id: site_wide
-        third_party_settings: {  }
-        uuid: 7dde4d22-6265-4fd5-99a9-4dd8b26f6bc8
       9740d247-314b-4196-b4f0-5cc24af53503:
         id: 'system_menu_block:main'
         label: 'Main navigation'
@@ -163,11 +144,11 @@ reactions:
         label: 'Block for footer'
         provider: block_content
         label_display: '0'
+        region: footer_fifth
+        weight: '0'
         status: true
         info: ''
         view_mode: full
-        region: footer_fifth
-        weight: '0'
         context_mapping: {  }
         custom_id: block_content_df1e2223_10d2_478e_b947_c4dc70d2fe39
         theme: bartik_aewa

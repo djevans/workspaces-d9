@@ -1,0 +1,20 @@
+uuid: 992f5946-da90-4506-910f-5b5441f56c26
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bartik_aewa
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: bartik_aewa_local_actions
+theme: bartik_aewa
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

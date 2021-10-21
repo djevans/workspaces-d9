@@ -1,11 +1,11 @@
 uuid: 999a2d9b-8684-4826-87cd-acdcf6a94f06
-name: 'CMS Scientific Council Workspace'
+name: ' AEWA Technical Committee Workspace'
 mail: noreply.cms@cms.int
 slogan: ''
 page:
   403: /node/590
   404: /
-  front: /node/255
+  front: /node/4
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

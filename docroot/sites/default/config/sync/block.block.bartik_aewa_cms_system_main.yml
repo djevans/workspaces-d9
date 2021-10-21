@@ -1,0 +1,22 @@
+uuid: eff2894a-219b-4195-b1d0-c57458846764
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bartik_aewa
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: bartik_aewa_cms_system_main
+theme: bartik_aewa
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }
