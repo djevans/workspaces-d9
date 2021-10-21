@@ -6,6 +6,9 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\migrate\Plugin\MigrateSourceInterface;
+use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\migrate\Row;
 
 /**
  * Implements hook_help().
@@ -38,4 +41,19 @@ function migration_group_migration_plugins_alter(array &$migrations) {
       !in_array($migration['source']['node_type'], $excluded_node_types)
     );
   });
+}
+
+/**
+ * Implements hook_migrate_prepare_row().
+ */
+function migration_group_migrate_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+  if ($migration->id() == 'upgrade_d7_menu_links') {
+    // Working Groups are no longer nodes, so update the link paths.
+    if (preg_match('|node/(\d+)|', $row->getSourceProperty('link_path'), $matches)) {
+      $nid = $matches[1];
+      if ($group = \Drupal\group\Entity\Group::load($nid)) {
+        $row->setSourceProperty('link_path', 'group/' . $nid);
+      }
+    }
+  }
 }
