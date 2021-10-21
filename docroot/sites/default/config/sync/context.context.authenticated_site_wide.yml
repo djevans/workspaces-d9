@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - views.view.comments_recent
-    - views.view.links_and_resources
     - views.view.new_content
     - views.view.surveys
     - views.view.who_s_online
@@ -48,7 +47,7 @@ reactions:
         weight: '-1'
         context_mapping: {  }
         custom_id: views_block_comments_recent_block_1
-        theme: bartik_cms
+        theme: bartik_aewa
         css_class: ''
         unique: 0
         context_id: authenticated_site_wide
@@ -65,7 +64,7 @@ reactions:
         weight: '0'
         context_mapping: {  }
         custom_id: views_block_who_s_online_who_s_online_block
-        theme: bartik_cms
+        theme: bartik_aewa
         css_class: ''
         unique: 0
         context_id: authenticated_site_wide
@@ -82,7 +81,7 @@ reactions:
         weight: '1'
         context_mapping: {  }
         custom_id: views_block_surveys_block_1
-        theme: bartik_cms
+        theme: bartik_aewa
         css_class: ''
         unique: 0
         context_id: authenticated_site_wide
@@ -100,7 +99,7 @@ reactions:
         weight: '-2'
         context_mapping: {  }
         custom_id: forum_new_block
-        theme: bartik_cms
+        theme: bartik_aewa
         css_class: ''
         unique: 0
         context_id: authenticated_site_wide
@@ -117,29 +116,12 @@ reactions:
         weight: '-1'
         context_mapping: {  }
         custom_id: views_block_new_content_block_1
-        theme: bartik_cms
+        theme: bartik_aewa
         css_class: ''
         unique: 0
         context_id: authenticated_site_wide
         third_party_settings: {  }
         uuid: b43cac8e-6d0c-4f93-933e-b675808be0b4
-      938c7c5a-7bef-4b43-b16b-c84a11774ec1:
-        id: 'views_block:links_and_resources-block_1'
-        label: ''
-        provider: views
-        label_display: visible
-        views_label: ''
-        items_per_page: none
-        region: sidebar_second
-        weight: '0'
-        context_mapping: {  }
-        custom_id: views_block_links_and_resources_block_1
-        theme: bartik_cms
-        css_class: ''
-        unique: 0
-        context_id: authenticated_site_wide
-        third_party_settings: {  }
-        uuid: 938c7c5a-7bef-4b43-b16b-c84a11774ec1
       11ead93b-d940-4143-892e-933a716c0014:
         id: search_form_block
         label: Search
@@ -150,7 +132,7 @@ reactions:
         weight: '-3'
         context_mapping: {  }
         custom_id: search_form_block
-        theme: bartik_cms
+        theme: bartik_aewa
         css_class: ''
         unique: 0
         context_id: authenticated_site_wide

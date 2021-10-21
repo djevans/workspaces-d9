@@ -1,0 +1,275 @@
+uuid: ce6c2b74-b620-4ea8-b92a-b97776c05de6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+    - system.menu.main
+    - system.menu.tools
+  content:
+    - 'block_content:basic:df1e2223-10d2-478e-b947-c4dc70d2fe39'
+  module:
+    - block_content
+    - group
+    - help
+    - language
+    - system
+    - user
+name: site_wide
+label: Site-wide
+group: Site-wide
+description: ''
+requireAllConditions: false
+disabled: false
+conditions: {  }
+reactions:
+  blocks:
+    blocks:
+      fd252381-b208-4864-82c9-a07c66ecca0b:
+        id: system_branding_block
+        label: 'Site branding'
+        provider: system
+        label_display: '0'
+        use_site_logo: 1
+        use_site_name: 1
+        use_site_slogan: 1
+        region: header
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_branding_block
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: fd252381-b208-4864-82c9-a07c66ecca0b
+      7dde4d22-6265-4fd5-99a9-4dd8b26f6bc8:
+        id: 'language_block:language_interface'
+        label: 'Language switcher'
+        provider: language
+        label_display: '0'
+        region: header
+        weight: '0'
+        context_mapping: {  }
+        custom_id: language_block_language_interface
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: 7dde4d22-6265-4fd5-99a9-4dd8b26f6bc8
+      9740d247-314b-4196-b4f0-5cc24af53503:
+        id: 'system_menu_block:main'
+        label: 'Main navigation'
+        provider: system
+        label_display: '0'
+        level: '1'
+        depth: '0'
+        expand_all_items: 0
+        region: primary_menu
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_menu_block_main
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: 9740d247-314b-4196-b4f0-5cc24af53503
+      13886e66-80fa-4082-b3d5-3673769a4f54:
+        id: 'system_menu_block:account'
+        label: 'User account menu'
+        provider: system
+        label_display: '0'
+        level: '1'
+        depth: '0'
+        expand_all_items: 0
+        region: secondary_menu
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_menu_block_account
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: 13886e66-80fa-4082-b3d5-3673769a4f54
+      f67f383c-a496-4558-8fbb-f8be74452788:
+        id: system_messages_block
+        label: Messages
+        provider: system
+        label_display: '0'
+        region: highlighted
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_messages_block
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: f67f383c-a496-4558-8fbb-f8be74452788
+      f6dfdd6d-c7b9-4c04-9070-202f805a247b:
+        id: system_breadcrumb_block
+        label: Breadcrumbs
+        provider: system
+        label_display: '0'
+        region: breadcrumb
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_breadcrumb_block
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: f6dfdd6d-c7b9-4c04-9070-202f805a247b
+      51df9949-7bd1-4249-8956-ea78cbfda2bf:
+        id: group_operations
+        label: 'Group operations'
+        provider: group
+        label_display: visible
+        region: sidebar_first
+        weight: '0'
+        context_mapping:
+          group: '@group.group_route_context:group'
+        custom_id: group_operations
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: 51df9949-7bd1-4249-8956-ea78cbfda2bf
+      de795a2f-4ea4-4fde-975a-76fdd4e08a33:
+        id: 'system_menu_block:tools'
+        label: Tools
+        provider: system
+        label_display: visible
+        level: '1'
+        depth: '0'
+        expand_all_items: 0
+        region: sidebar_first
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_menu_block_tools
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: de795a2f-4ea4-4fde-975a-76fdd4e08a33
+      a142031c-4722-4aea-a4fd-f869cf093cd4:
+        id: 'block_content:df1e2223-10d2-478e-b947-c4dc70d2fe39'
+        label: 'Block for footer'
+        provider: block_content
+        label_display: '0'
+        status: true
+        info: ''
+        view_mode: full
+        region: footer_fifth
+        weight: '0'
+        context_mapping: {  }
+        custom_id: block_content_df1e2223_10d2_478e_b947_c4dc70d2fe39
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: a142031c-4722-4aea-a4fd-f869cf093cd4
+      23f1b3b1-979f-4787-b254-ead115a3b832:
+        id: system_powered_by_block
+        label: 'Powered by Drupal'
+        provider: system
+        label_display: '0'
+        region: footer_fifth
+        weight: '0'
+        context_mapping: {  }
+        custom_id: system_powered_by_block
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: 23f1b3b1-979f-4787-b254-ead115a3b832
+      8e2bbf52-6632-4fa5-b483-df02d8a533db:
+        id: page_title_block
+        label: 'Page title'
+        provider: core
+        label_display: '0'
+        region: content
+        weight: '-6'
+        context_mapping: {  }
+        custom_id: page_title_block
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: 8e2bbf52-6632-4fa5-b483-df02d8a533db
+      e70d5cce-a127-4e38-8dd3-fb2700033418:
+        id: local_tasks_block
+        label: Tabs
+        provider: core
+        label_display: '0'
+        primary: 1
+        secondary: 1
+        region: content
+        weight: '-5'
+        context_mapping: {  }
+        custom_id: local_tasks_block
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: e70d5cce-a127-4e38-8dd3-fb2700033418
+      ede16d94-b0b8-471f-9dfd-b4d15b17a6f2:
+        id: help_block
+        label: Help
+        provider: help
+        label_display: '0'
+        region: content
+        weight: '-4'
+        context_mapping: {  }
+        custom_id: help_block
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: ede16d94-b0b8-471f-9dfd-b4d15b17a6f2
+      98e43d6e-f501-40ed-9a45-4fce0a665e9a:
+        id: local_actions_block
+        label: 'Primary admin actions'
+        provider: core
+        label_display: '0'
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        custom_id: local_actions_block
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: 98e43d6e-f501-40ed-9a45-4fce0a665e9a
+      2b0055c4-f41b-4a40-a721-eaf4733a3f44:
+        id: user_login_block
+        label: 'User login'
+        provider: user
+        label_display: visible
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        custom_id: user_login_block
+        theme: bartik_aewa
+        css_class: ''
+        unique: 0
+        context_id: site_wide
+        third_party_settings: {  }
+        uuid: 2b0055c4-f41b-4a40-a721-eaf4733a3f44
+    id: blocks
+    saved: false
+    uuid: 86a34f54-be8c-4f50-ba63-a5d3900ceed2
+    include_default_blocks: 0
+weight: 0

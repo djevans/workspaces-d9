@@ -39,7 +39,7 @@ reactions:
         weight: '0'
         context_mapping: {  }
         custom_id: system_menu_block_main
-        theme: bartik_cms
+        theme: bartik_aewa
         css_class: ''
         unique: 0
         context_id: navigation_and_admin
