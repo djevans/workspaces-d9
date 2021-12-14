@@ -142,6 +142,6 @@ body, #site-slogan, .ui-widget, .comment-form label {
   float: right;
 }
 
-.comment .indented {
+.comment-wrapper .indented {
   margin-left: initial;
 }
