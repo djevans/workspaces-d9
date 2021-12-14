@@ -141,3 +141,7 @@ body, #site-slogan, .ui-widget, .comment-form label {
 .profile .user-picture {
   float: right;
 }
+
+.comment .indented {
+  margin-left: initial;
+}
